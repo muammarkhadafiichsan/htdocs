@@ -22,7 +22,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
-}
+
 public function about()
 {
 	// fungsi untuk me-load view about.php
@@ -33,4 +33,5 @@ public function contact()
 {
 	// fungsi untuk me-load view contact.php
 	$this->load->view('contact.php');
+}
 }
