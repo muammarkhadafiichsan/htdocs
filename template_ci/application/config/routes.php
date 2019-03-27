@@ -37,8 +37,12 @@
 | in the URL cannot be matched to a valid route.
 |
 */
+<<<<<<< HEAD:template_ci/application/config/routes.php
 
 $route['default_controller'] = "main";
+=======
+$route['default_controller'] = 'Awal';
+>>>>>>> bd0cafb23933772a6dedaeeb8d45ee0e331d5c9a:application/config/routes.php
 $route['404_override'] = '';
 
 
