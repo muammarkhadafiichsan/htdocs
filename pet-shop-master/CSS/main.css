@@ -1,0 +1,371 @@
+body {
+font-family: cursive;
+}
+
+.logocontainer {
+     margin: 1% auto;
+     width: 90%;
+}
+
+#logo {
+    max-width: 100%;
+}
+
+/*Menu*/
+
+#menutoggle {
+    display: none;
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+    background-color: mediumpurple;
+    height: 40px;
+    width: 99%;
+    margin: 3% auto;
+}
+
+#mainmenu {
+    margin:  1% auto;
+    width: 90%;
+}
+
+#mainmenu li {
+    display: block;
+    width: 20%;
+    float: left;
+}
+
+#mainmenu a {
+    display: block;
+    text-decoration: none;
+    padding: 0.5%;
+    background-color: mediumpurple;
+    color: white;
+    text-align: center;
+}
+
+#mainmenu a:hover {
+    background-color: purple;
+}
+
+#mainmenu a:active {
+    background-color: crimson;
+}
+
+/*index*/
+.maincontent {
+    clear: both;
+    width: 90%;
+    margin: 3% auto; 
+}
+
+.maincontent ul {
+    list-style-type: disc;
+    margin: 1% auto; 
+}
+
+.maincontent ul li {
+    margin-left: 25px;
+}
+
+.maincontent h1 {
+    color: crimson;
+    font-size: large;
+}
+
+#overview {
+    float:left;
+    width: 45%;
+    margin: 3% auto;
+    padding: 0.5%;
+    background-color: #F5F5F5;
+    border-radius: 25px;
+    box-shadow: 5px 5px 2px #999;
+}
+
+#overview h1{
+    text-decoration: underline;
+}
+
+#teddy {
+    float: right;
+    width: 40%;
+    margin: 3% auto;
+    padding: 0.5%;
+    background-color: #F5F5F5;
+    border-radius: 25px;
+    box-shadow: 5px 5px 2px #999;
+}
+
+#teddy img {
+    display: block;
+    max-width: 100%;
+    width: 50%;
+    margin: auto;
+    border-radius: 25px;
+}
+
+#teddy h1 {
+    text-align: center;
+    color: crimson;
+}
+
+/*About Us*/
+
+#grouppic {
+    float: right;
+    width: 40%;
+    margin: 3% auto;
+    padding: 0.5%;
+    background-color: #F5F5F5;
+    border-radius: 25px;
+    box-shadow: 5px 5px 2px #999;
+}
+
+#grouppic img {
+    max-width: 100%;
+    margin-top: 0.5%;
+    border-radius: 25px;
+}
+
+#grouppic h1{
+    text-align: center;
+    color: crimson;
+}
+
+/*Contact Us*/
+
+#formcontent {
+    clear: both;
+    width: 40%;
+    margin: 3% auto;
+    background-color: #F5F5F5;
+    border-radius: 25px;
+    box-shadow: 5px 5px 2px #999;
+}
+
+#formcontent h1{
+    text-align: center;
+    font-size: 50px;
+    color: crimson; 
+}
+
+#contactform {
+    width: 50%;
+    margin: 3% auto;
+    border: crimson 2px solid; 
+    padding: 0.5%;
+    background-color: white;
+}
+
+#firstname {
+    margin: 1% auto;
+}
+
+#lastname {
+    margin: 1% auto;
+ }
+#email {
+   margin: 1% auto;
+}
+
+#comments {
+    margin: 1% auto;
+}
+
+/*Grooming Page*/
+
+#apptformcontent {
+    float: right;
+    width: 50%;
+    margin: 3% auto;
+    background-color: #F5F5F5;
+    border-radius: 25px;
+    box-shadow: 5px 5px 2px #999;
+}
+
+#apptformcontent h1 {
+    text-align: center;
+    font-size: 50px;
+    color: crimson; 
+}
+
+/*Appointment Form*/
+
+#appointmentform {
+    width: 50%;
+    margin: 3% auto;
+    border: crimson 2px solid;
+    background-color: white;
+    padding: 0.5%;
+}
+
+#address {
+    margin: 1% auto;
+}
+
+#city {
+    margin: 1% auto;
+}
+
+#state {
+    margin: 1% auto;
+}
+
+#zip {
+    margin: 1% auto;
+}
+
+#phone {
+    margin: 1% auto;
+}
+
+#typeofpet {
+    margin: 1% auto;
+}
+
+#breed {
+    visibility:  hidden; 
+}
+
+#petname {
+    margin: 1% auto;
+}
+
+#petage {
+    margin: 1% auto;
+}
+
+#altered {
+    margin: 1% auto;
+}
+
+
+/*Admin Table Format*/
+#admintable {
+    text-align: center;
+    width: 90%;
+    margin: 3% auto;
+    padding: 1% auto;
+    border: crimson 2px solid;
+}
+
+#admintable th {
+     padding: 1% auto;
+     border: crimson 2px solid;
+}
+
+#admintable td {
+     padding: 1% auto;
+     border: crimson 2px solid;
+}
+
+
+/*Add Appointment Form*/
+
+#addappointmentform {
+    width: 70%;
+    margin: 3% auto;
+    border: crimson 2px solid; 
+    padding: 0.5%;
+    background-color: white;
+}
+
+/*edit Appointment Form*/
+
+#editappointmentform {
+    width: 70%;
+    margin: 3% auto;
+    border: crimson 2px solid; 
+    padding: 0.5%;
+    background-color: white;
+}
+
+#editbreed {
+    visibility:  visible; 
+}
+
+
+/*Store Location*/
+
+#mapcontainer {
+    float: right;
+    width: 45%;
+    height: 400px;
+    margin: 3% auto;
+    border: crimson 2px solid;
+    background-color: #F5F5F5;
+    box-shadow: 5px 5px 2px #999;
+}
+
+/* Footer Stuff*/
+#footer {
+    clear: both;
+    width: 89.5%;
+    padding: 0.3%;
+    margin: 1% auto;
+    background-color: mediumpurple;
+    color: white;
+    text-align: center;
+}
+
+/* Misc */
+#footer a {
+    text-decoration: none;
+    color: white;
+    text-align: right;
+}
+
+#login {
+    float: right;
+}
+
+#localservices {
+    float: left;
+}
+
+
+#loginform {
+    width: 70%;
+    margin: 3% auto;
+    border: crimson 2px solid; 
+    padding: 0.5%;
+    background-color: white;
+}
+
+#loginerror {
+    text-align: center;
+    font-size: 25px;
+    color: crimson; 
+}
+
+
+/*Media Queries*/
+
+
+@media screen and (max-width: 700px) {
+    #overview, #teddy, #mapcontainer, #grouppic, #apptformcontent, #formcontent  {
+        float: none;
+        width: 95%;
+    }
+    
+}
+
+@media screen and (max-width: 450px){
+#mainmenu {
+    display:none;
+}
+
+#menutoggle {
+        display: block;
+      }
+      
+#mainmenu li {
+    float: none;
+    width: 40%;
+    }
+    
+#footer {
+    display: none;
+    }   
+}

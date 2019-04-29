@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+    
+}
+#judul_web{
+    margin-top: 40px;
+    color:#50a8a9;
+    font-size: 30px;
+    font-family: algerian;
+}
+.top{
+    width: 100%;
+    height: 60px;
+    background: #e2e2e2;
+}
+body{
+    background: #e2e2e2;
+}
+.wrapper{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    
+}
+header{
+    width: 100%;
+    height: 40px;
+    background: #50a8a9;
+    
+}
+header li{
+    list-style: none;
+    float: left;
+    width: 15%;
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+}
+header li:hover{
+    background: #249697;
+}
+header li:last-child{
+    float: right;
+}
+li a{
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+nav{
+    width: 100%;
+    height: 150px;
+    background: white;
+}
+.search{
+    float: right;
+    margin: 50px 30px;
+    width: 300px;
+    height: 40px;
+    background: #dfdfdf;
+}
+.marquee{
+    color:white;
+    width: 100%;
+    height: 40px;
+    background: #454a44;
+}
+#teks_berjalan{
+    line-height: 40px;
+}
+
+
+#judul_form{
+    margin  : 20px;
+    font-size: 23px;
+    
+}
+ #waktu, #tag {
+    font-size: 11px;
+}
+    .form2{
+    width: 80%;
+    height: autos;
+    background: white;
+    float: left;
+    border-right: 0.5px solid #dddddd;
+    box-sizing: border-box;
+    padding-left: 10px;
+    display: inline-block;
+}
+    .artikel2{
+    width: 90%;
+    height: auto;
+    background: white;
+    padding: 10px;
+    margin: 20px;
+    border-bottom: 0.5px solid #dddddd;
+}
+    h2 a{
+        color: #50a8a9;
+    }
+
+/*      SIDEBAR */
+
+
+
+#teks_top_sidebar{
+    width: 95%;
+    height: 40px;
+    margin: 0 auto;     
+    background: #50a8a9;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+}
+.sidebar2{
+    width: 100%;
+    height: 300px;
+    background: white;
+}
+#teks_top_sidebar2{
+    width: 95%;
+    height: 40px;
+    margin: 0 auto;     
+    background: #50a8a9;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+}
+
+
+
+
+/* FOOTER*/
+
+footer{
+        
+        width: 100%;
+        height: 80px;
+        background: #50a8a9;
+        clear: both;
+    }
+    .in-footer{
+    }
+    footer li{
+        list-style: none;
+        float: left;
+        width: 12%;
+        text-align: center;
+        margin-top: 30px;
+    }
+    a{
+        text-decoration: none;
+        
+    }
+.footer{
+    width: 100%;
+    height: auto;
+    background: #454a44;
+}
+.footer li{
+    color: #d3d3d3;
+    list-style: none;
+        float: left;
+        width: 30%;
+        text-align: center;
+    margin-top: 20px;
+    
+}
+
+#copyright{
+    padding : 10px;
+    margin-top: 100px;
+    color: white;
+    clear: both;
+    width: 100%;
+    text-align: center;
+}
+
+/*    form tambah data    */
+
+.error{
+    color: red;
+}
