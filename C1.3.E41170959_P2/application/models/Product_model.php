@@ -87,4 +87,13 @@ class Product_model extends CI_Model
     
     return "oppa.jpg";
 }
+
+    private function _deleteImage($id)
+{
+    $product = $this->getById($id);
+    if ($product->image != "default.jpg") {
+	    $filename = explode(".", $product->image)[0];
+		return array_map('unlink', glob(FCPATH."upload/product/$filename.*"));
+    }
+}
 }
