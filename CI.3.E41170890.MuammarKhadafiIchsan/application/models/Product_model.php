@@ -30,6 +30,7 @@ class Product_model extend CI_Model
     public function getall()
     {
         return $this->db->get($this->umkm)->result();
+        //mengambuil semua yang berada di table
 
     }
 
@@ -37,6 +38,7 @@ class Product_model extend CI_Model
 
     {
         return $this->db->get_where($this->umkm,["id"=>$id])->row();
+        //mengambil satu record
         
     }
     public function save()
