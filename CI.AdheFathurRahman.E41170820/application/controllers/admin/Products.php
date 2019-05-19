@@ -31,6 +31,20 @@ class Products extends CI_Controller
         $this->load->view("admin/product/new_form");
     }
 
+    public function sms()
+    {
+        $product = $this->product_model;
+        $validation = $this->form_validation;
+        $validation->set_rules($product->rules());
+
+        if ($validation->run()) {
+            $product->save();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+
+        $this->load->view("admin/product/sms");
+    }
+
     public function edit($id = null)
     {
         if (!isset($id)) redirect('admin/products');
