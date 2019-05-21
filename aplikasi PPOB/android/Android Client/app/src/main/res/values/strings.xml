@@ -1,0 +1,21 @@
+<resources>
+	<string name="app_name">Android Client</string>
+
+	<string-array name="pilihan">
+		<item></item>
+		<item>Telkomsel</item>
+		<item>Indosat</item>
+		<item>XL/Axis</item>
+		<item>SmartFreen</item>
+		<item>Tree</item>
+	</string-array>
+
+	<string-array name="harga">
+		<item></item>
+		<item>5000</item>
+		<item>10.000</item>
+		<item>20.000</item>
+		<item>50.000</item>
+		<item>100.000</item></string-array>
+
+</resources>
