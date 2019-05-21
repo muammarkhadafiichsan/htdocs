@@ -11,7 +11,7 @@ public class ActivityOne extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
 
-        TextView txtInfo = (TextView)findViewById(R.id.txtInfo);
+        TextView txtInfo = this.<TextView>findViewById(R.id.sp_name);
         if(getIntent() != null)
         {
             String info = getIntent().getStringExtra("info");
