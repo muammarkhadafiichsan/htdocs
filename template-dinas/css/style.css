@@ -1,0 +1,440 @@
+body,a,p,h1,h2,h3,h4,h5,h6{
+	font-family: Open Sans;
+}
+
+body{
+	background: #f1f1f1;
+	background-image: url(../img/bg.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+.col-null{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.col-left-cst{
+	padding-left: 5px;
+}
+
+.col-leftright-cst{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.header{
+	margin-top: 70px;
+	background: #111;
+	background-image: url(../img/header-bg.jpg);
+	padding: 40px;
+}
+
+.footer{
+	padding: 50px;
+}
+
+.header img{
+	height: 75px;
+	margin-right: 7px;
+	vertical-align: bottom;
+}
+
+.header .image{
+	margin-right: 10px;
+}
+
+.header .image, .header .title{
+	display: inline-block;
+}
+
+.header .title{
+	color: #222;
+}
+
+.header .title h5{
+	margin: 0;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.header .title h3{
+	margin: 0;
+	font-weight: 800;
+	font-size: 30px;
+	line-height: 34px;
+}
+
+.top-menu{
+	background: #015198;
+	padding: 15px 10px;
+}
+
+.top-menu a{
+	position: relative;
+	top: 5px;
+	color: #fff;
+	font-size: 16px;
+	display: inline-block;
+}
+
+.date-place{
+	position: relative;
+	top: 5px;
+	display: inline-block;
+	font-size: 16px;
+	margin-left: 10px;
+	color: #fff;
+}
+
+.search{
+	text-align: right;
+}
+
+.search input, .search select{
+	border: none;
+	padding: 3px 10px;
+	color: #424242;
+}
+
+.search select{
+	font-size: 13px;
+}
+
+.search button{
+	border: none;
+	padding: 3px 9px;
+	background: #222;
+	color: #fff;
+}
+
+.body{
+	padding-bottom: 30px;
+	background: #fff;
+}
+
+.body-in{
+	padding-top: 30px;
+}
+
+.late-news{
+	margin: 15px 0;
+}
+
+.late-news .date{
+	padding: 10px 20px;
+	background: #2980b9;
+	color: #fff;
+	position: relative;
+	margin-top: -60px;
+	display: table;
+}
+
+.late-news .letter{
+	margin-top: 20px;
+	border: 1px solid #ddd;
+	padding: 10px 15px;
+}
+
+.letter .title-news{
+	font-weight: bold;
+	font-size: 16px;
+	display: block;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 10px;
+}
+.letter p{
+	margin-bottom: 0;
+	margin-top: 10px;
+	font-size: 13px;
+}
+
+.item-sidebar .body-title, .body .body-title{
+	border-bottom: 3px solid #3498db;
+}
+
+.item-sidebar .title, .body .title{
+	font-weight: 700;
+	font-size: 13px;
+	background: #3498db;
+	display: inline-block;
+	color: #fff;
+	padding: 10px 13px;
+	margin-top: 35px;
+	margin-bottom: 0;
+}
+
+.gallery{
+	background: #f1f1f1;
+}
+
+.list-sidebar{
+	padding-left: 10px;
+	list-style: none;
+}
+
+.list-sidebar li a{
+	display: block;
+	font-weight: 800;
+	color: #fff;
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+.list-sidebar li{
+	padding: 8px 0;
+}
+
+.list-sidebar li:first-child{
+	padding-top: 0;
+}
+
+.list-sidebar li:last-child{
+	padding-bottom: 0;
+}
+
+.list-sidebar li a:hover{
+	text-decoration: none;
+	color: #3498db;
+}
+
+.list-link-terkait{
+	list-style: none;
+	padding-left: 0;
+}
+
+.list-link-terkait li{
+	border-bottom: 1px dashed #e9e9e9;
+	padding: 15px 0;
+}
+
+.list-link-terkait li a{
+	color: #222;
+}
+
+.list-link-terkait li a:hover{
+	text-decoration: none;
+}
+
+.list-link-terkait li a h5{
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: 800;
+	font-size: 14px;
+	color: #555;
+}
+
+.list-link-terkait li a h5:hover{
+	color: #3498db;
+}
+
+.list-link-terkait li a span{
+	color: #3498db;
+	font-weight: 600;
+	font-size: 13px;
+	font-style: italic;
+	margin-bottom: 0;
+}
+
+.list-kalbar{
+	list-style-type: square;
+	padding-left: 17px;
+	margin-top: 10px;
+}
+
+.list-kalbar li{
+	padding: 10px 0;
+	border-bottom: 1px dashed #e9e9e9;
+}
+
+.list-kalbar li a{
+	font-weight: 800;
+	color : #555;
+	font-size: 13px;
+}
+
+#map_canvas{
+	margin-top: 30px;
+	min-height: 450px;
+}
+
+.bg-maps{
+	min-height: 450px;
+	background-image: url("../img/pattern.png");
+	margin-top: -450px;
+	position: relative;
+	z-index: 99;
+	cursor: pointer;
+}
+
+.bg-maps h1{
+	margin: 0;
+	position: absolute;
+	top: 40%;
+	left: 30%;
+	font-weight: bold;
+	color: #fff;
+	padding: 15px 30px;
+	border: 5px solid #fff;
+}
+
+.bg-maps h1 span{
+	font-size: 12pt;
+	display: block;
+	text-align: center;
+	padding-top: 10px;
+	font-weight: 400;
+}
+
+.col-carousel{
+	background: #f1f1f1;
+}
+
+.footer{
+	background: #111;
+}
+
+.footer h4{
+	color: #fff;
+	margin: 0;
+	padding-bottom: 15px;
+	margin-left: 12px;
+	border-bottom: 1px solid #fff;
+}
+
+.hits-counter{
+	margin-top: 10px;
+	display: block;
+	color: #fff;
+}
+
+.hits-counter h3{
+	margin-top: 0;
+	font-weight: 300;
+	font-size: 30px;	
+}
+
+.hits-counter h5{
+	font-weight: 800;
+}
+
+.frame-foto a{
+	position: absolute;
+}
+
+/*bootstrap edit*/
+
+.panel-heading, .panel-group .panel{
+	border-radius: 0;
+}
+
+.panel-default>.panel-heading{
+	background: #222;
+	color: #fff;
+}
+
+.nav-tabs{
+	border: 0;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+	background: #2980b9;
+	color: #fff;
+	border: 0;
+}
+
+.nav-tabs>li>a{
+	background: #3498db;
+	border-radius: 0;
+	color: #fff;
+	font-weight: 600;
+	border: none;
+	padding: 7px 13px;
+	font-size: 13px;
+	margin-right: 0;
+}
+
+.nav-tabs>li>a:hover{
+	background: #34495e;
+}
+
+.tab-content{
+	padding: 15px;
+	border-top: 0;
+	background: #2980b9;
+}
+
+.carousel-control{
+	background: #f1f1f1;
+	opacity: 1;	
+	width: 4%;
+	height: 23%;
+	top: 40%;
+}
+
+.carousel-gallery{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.carousel-slide{
+	padding-bottom: 30px;
+}
+
+.carousel-control.right, .carousel-control.left{
+	background-image: none;
+	background: none;
+	color: #fff;
+	text-shadow: none;
+}
+
+.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right{
+	top: 24%;
+	right: 28%;
+}
+
+.carousel-control .icon-next, .carousel-control .glyphicon-chevron-left{
+	top: 24%;
+	left: 28%;
+}
+
+.carousel-indicators{
+	top: 98%;
+}
+
+.carousel-indicators .active{
+	background: #3498db;
+	width: 7%;
+}
+
+.carousel-indicators li{
+	border: 1px solid #3498db;
+	border-radius: 0;
+	width: 7%;
+}
+
+.carousel-control{
+	font-size: 28px;
+}
+
+.carousel-caption.caption-slide{
+	background: #2980b9;
+	left: 0;
+	padding: 0;
+	text-align: left;
+	padding: 10px 20px;
+}
+
+.carousel-caption.caption-slide h3{
+	margin: 0;
+	margin-bottom: 10px;
+	font-weight: 700;
+}
+
+.carousel-caption.caption-slide p{
+}
+
