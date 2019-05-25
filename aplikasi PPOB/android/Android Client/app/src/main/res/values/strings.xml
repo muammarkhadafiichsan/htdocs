@@ -1,6 +1,7 @@
 <resources>
 	<string name="app_name">Android Client</string>
 
+
 	<string-array name="pilihan">
 		<item></item>
 		<item>Telkomsel</item>

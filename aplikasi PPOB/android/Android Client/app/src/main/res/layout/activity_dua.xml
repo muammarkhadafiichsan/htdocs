@@ -3,11 +3,13 @@
 	android:paddingStart="50dp"
 	android:paddingEnd="50dp"
 	android:paddingLeft="50dp"
-	android:orientation="vertical" android:layout_width="match_parent"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
 	android:layout_height="match_parent">
 
 
 	<EditText
+		android:id="@+id/nomer"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:hint="masukkan nomer"
@@ -36,5 +38,8 @@
 		android:text="SEND"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" />
+
+
+
 
 </LinearLayout>

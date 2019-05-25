@@ -11,10 +11,10 @@ public class ActivityDua extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dua);
 
-		TextView txtInfo = this.<TextView>findViewById(R.id.sp_name);
+		TextView txtInfo = this.<TextView>findViewById(R.id.nomer);
 		if(getIntent() != null)
 		{
-			String info = getIntent().getStringExtra("info");
+			String info = getIntent().getStringExtra("nomer");
 			txtInfo.setText(info);
 		}
 	}
