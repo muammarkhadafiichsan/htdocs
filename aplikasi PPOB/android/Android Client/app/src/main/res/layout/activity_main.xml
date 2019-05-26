@@ -62,7 +62,7 @@
 					android:orientation="vertical">
 
 					<ImageView
-						android:id="@+id/pulsa"
+						android:id="@+id/btnpulsa"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:src="@drawable/pulsa" />
