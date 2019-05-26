@@ -1,5 +1,6 @@
 package com.pbob.aplikasi.androidclient;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -45,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
 						Toast.makeText(MainActivity.this, "State : False", Toast.LENGTH_SHORT).show();
 					}
 				}
-			});
+			}
+			);
 		}
 	}
 
@@ -53,15 +55,16 @@ public class MainActivity extends AppCompatActivity {
 		//Loop all child item of Main Grid
 		for (int i = 0; i < mainGrid.getChildCount(); i++) {
 			//You can see , all child item is CardView , so we just cast object to CardView
-			CardView cardView = (CardView) mainGrid.getChildAt(i);
+			final CardView cardView = (CardView) mainGrid.getChildAt(i);
 			final int finalI = i;
 			cardView.setOnClickListener(new View.OnClickListener() {
+				@SuppressLint("WrongViewCast")
 				@Override
 				public void onClick(View view) {
 
+					findViewById(R.id.btnpulsa);
 					Intent intent = new Intent(MainActivity.this,ActivityDua.class);
-					intent.putExtra("info","This is activity from card item index  "+finalI);
-					startActivity(intent);
+
 
 				}
 			});

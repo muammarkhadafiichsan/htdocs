@@ -11,7 +11,7 @@ public class ActivityDua extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_dua);
 
-		TextView txtInfo = this.<TextView>findViewById(R.id.nomer);
+		TextView txtInfo = this.<TextView>findViewById(R.id.btnpulsa);
 		if(getIntent() != null)
 		{
 			String info = getIntent().getStringExtra("nomer");
