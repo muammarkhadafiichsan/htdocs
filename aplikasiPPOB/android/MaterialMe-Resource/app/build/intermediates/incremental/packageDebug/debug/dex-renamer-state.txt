@@ -1,0 +1,4 @@
+#Mon May 27 00:12:02 ICT 2019
+base.0=D\:\\Kuliah\\android-fundamentals-apps-v2-master\\MaterialMe-Resource\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
