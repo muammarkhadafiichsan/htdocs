@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
-INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
-INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
-INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
+ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
+INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
+INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
+INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
 MERGED from [com.android.support:design:26.1.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\fbf600f3fe955de515f716d5f8d8a186\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\841baa824ea3463094fbe86987b2635a\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:recyclerview-v7:26.1.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-26.1.0.aar\93e082c7a45ebfdb58ec9c21ab7b85ba\AndroidManifest.xml:17:1-28:12
@@ -19,25 +19,25 @@ MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\a\.gradle
 MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\6f2763e339a1f4e062fd0b85c81ead96\AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\755fcb00c9c5b52eeed6e2340d081b74\AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\129850c8c1101a84daca6435496ecf50\AndroidManifest.xml:17:1-30:12
-INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
-INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
-INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
+INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
+INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
+INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
 	package
-		ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:17:5-45
-		INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml
+		ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:17:5-45
+		INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml
+		INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml
-		ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
-		INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml
+		INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml
+		ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
+		INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml
-		ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
-		INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml
+		INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml
+		ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:1-35:12
+		INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:11-69
+		ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:16:11-69
 application
-ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:19:5-33:19
+ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:19:5-33:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\fbf600f3fe955de515f716d5f8d8a186\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\fbf600f3fe955de515f716d5f8d8a186\AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\841baa824ea3463094fbe86987b2635a\AndroidManifest.xml:25:5-29:19
@@ -69,37 +69,37 @@ MERGED from [com.android.support:support-compat:26.1.0] C:\Users\a\.gradle\cache
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\129850c8c1101a84daca6435496ecf50\AndroidManifest.xml:24:5-28:19
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\129850c8c1101a84daca6435496ecf50\AndroidManifest.xml:24:5-28:19
 	android:supportsRtl
-		ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:23:9-35
+		ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:23:9-35
 	android:label
-		ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:22:9-41
+		ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:22:9-41
 	android:icon
-		ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:21:9-43
+		ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:21:9-43
 	android:allowBackup
-		ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:20:9-35
+		ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:20:9-35
 	android:theme
-		ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:24:9-40
+		ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:24:9-40
 activity#com.example.android.materialme.MainActivity
-ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:25:9-31:20
+ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:25:9-31:20
 	android:name
-		ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:25:19-47
+		ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:25:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:26:13-30:29
+ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:26:13-30:29
 action#android.intent.action.MAIN
-ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:27:17-69
+ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:27:17-69
 	android:name
-		ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:27:25-66
+		ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:27:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:29:17-77
+ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:29:17-77
 	android:name
-		ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:29:27-74
+		ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:29:27-74
 activity#com.example.android.materialme.DetailActivity
-ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:32:9-61
+ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:32:9-61
 	android:name
-		ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml:32:19-49
+		ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml:32:19-49
 uses-sdk
-INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml
-INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml
+INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml
+INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml
 MERGED from [com.android.support:design:26.1.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\fbf600f3fe955de515f716d5f8d8a186\AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:design:26.1.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\fbf600f3fe955de515f716d5f8d8a186\AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\841baa824ea3463094fbe86987b2635a\AndroidManifest.xml:21:5-23:78
@@ -130,18 +130,18 @@ MERGED from [com.android.support:support-compat:26.1.0] C:\Users\a\.gradle\cache
 MERGED from [com.android.support:support-compat:26.1.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\755fcb00c9c5b52eeed6e2340d081b74\AndroidManifest.xml:21:5-23:58
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\129850c8c1101a84daca6435496ecf50\AndroidManifest.xml:20:5-22:41
 MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\129850c8c1101a84daca6435496ecf50\AndroidManifest.xml:20:5-22:41
-INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml
-INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml
+INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml
+INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
 		ADDED from [com.android.support:design:26.1.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\fbf600f3fe955de515f716d5f8d8a186\AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
-		INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml
-		ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml
+		INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml
+		ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml
+		INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml
-		ADDED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml
-		INJECTED from D:\Kuliah\android-fundamentals-apps-v2-master\MaterialMe-Resource\app\src\main\AndroidManifest.xml
+		INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml
+		ADDED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml
+		INJECTED from C:\xampp\htdocs\aplikasi PPOB\android\MaterialMe-Resource\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
 ADDED from [com.android.support:design:26.1.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\design-26.1.0.aar\fbf600f3fe955de515f716d5f8d8a186\AndroidManifest.xml:26:9-28:38
 MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\a\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\841baa824ea3463094fbe86987b2635a\AndroidManifest.xml:26:9-28:38

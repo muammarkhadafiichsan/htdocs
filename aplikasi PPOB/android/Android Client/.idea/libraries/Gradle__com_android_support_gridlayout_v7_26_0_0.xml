@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.android.support:gridlayout-v7-26.0.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-26.0.0.aar/07b308f0c7325cb72cf9add602721e40/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/gridlayout-v7-26.0.0.aar/07b308f0c7325cb72cf9add602721e40/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/gridlayout-v7/26.0.0/c8d0d5b3b3ccbf588f53db81c8d97df808f3a2d5/gridlayout-v7-26.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
