@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         tabAdapter.addFragment(new SatuFragment(), "Tab 1");
         tabAdapter.addFragment(new DuaFragment(), "Tab 2");
         tabAdapter.addFragment(new TigaFragment(), "Tab 3");
-        tabAdapter.addFragment(new SatuFragment(), "Tab 4");
+        tabAdapter.addFragment(new EmpatFragment(), "Tab 4");
         tabAdapter.addFragment(new LimaFragment(), "Tab 5");
 
 
