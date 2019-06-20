@@ -15,7 +15,7 @@
 		<activity android:name=".Login" />
 		<activity android:name=".Kerjasama" />
 		<activity android:name=".Keranjang" />
-		<activity android:name=".JualBeli" />
+		<activity android:name=".Labupt" />
 		<activity android:name=".KunjunganTernak" />
 		<activity android:name=".ForumBisnis" />
 		<activity android:name=".MainActivity">
