@@ -21,7 +21,7 @@ class kunjungan extends REST_Controller {
             $this->db->where('id', $id);
             $peternak = $this->db->get('kunjungan')->result();
         }
-        $this->response($peternak, 200);
+        $this->response(array("result"=>$peternak, 200));
     }
 }
 ?>
