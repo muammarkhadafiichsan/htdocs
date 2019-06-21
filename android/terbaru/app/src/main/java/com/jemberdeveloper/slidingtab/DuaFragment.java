@@ -4,7 +4,7 @@ package com.jemberdeveloper.slidingtab;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.text.Layout;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +18,7 @@ public class DuaFragment extends Fragment implements View.OnClickListener {
 
     private LinearLayout forumbisnis;
     private LinearLayout kunjunganternak;
-    private LinearLayout jualbeli;
+    private CardView jualbeli;
     public DuaFragment() {
         // Required empty public constructor
     }
@@ -36,7 +36,7 @@ public class DuaFragment extends Fragment implements View.OnClickListener {
         kunjunganternak = (LinearLayout) view.findViewById(R.id.kunjunganternak);
         kunjunganternak.setOnClickListener(this);
 
-        jualbeli = (LinearLayout) view.findViewById(R.id.jualbeli);
+        jualbeli = (CardView) view.findViewById(R.id.lab);
         jualbeli.setOnClickListener(this);
 
 
@@ -56,7 +56,7 @@ public class DuaFragment extends Fragment implements View.OnClickListener {
             startActivity(intent);
         }
         if(view == jualbeli){
-            Intent intent =new Intent(getActivity(),JualBeli.class);
+            Intent intent =new Intent(getActivity(),Labupt.class);
             startActivity(intent);
         }
     }
