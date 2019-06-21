@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	package="com.jemberdeveloper.slidingtab">
+	<uses-permission android:name="android.permission.INTERNET"/>
 
 	<application
 		android:allowBackup="true"
@@ -9,11 +10,12 @@
 		android:roundIcon="@mipmap/ic_launcher_round"
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme">
-		<activity android:name=".KunjunganUnggas"></activity>
+		<activity android:name=".Kerjasama"></activity>
+		<activity android:name=".KunjunganUnggas" />
 		<activity android:name=".ForumUnggas" />
 		<activity android:name=".Register" />
 		<activity android:name=".Login" />
-		<activity android:name=".Kerjasama" />
+		<activity android:name=".DetailForumUnggas" />
 		<activity android:name=".Keranjang" />
 		<activity android:name=".JualBeli" />
 		<activity android:name=".KunjunganTernak" />
@@ -24,6 +26,7 @@
 
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
+
 		</activity>
 	</application>
 
