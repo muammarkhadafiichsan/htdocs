@@ -12,12 +12,11 @@ import retrofit2.http.POST;
 import retrofit2.http.PUT;
 
 
-public interface ApiInterface {
+	public interface ApiInterface {
 
-	@GET("forum")
-	Call<GetForum> getKontak();
-	@GET("Kunjungan")
-	Call<GetKunjungan> getkunjungan();
+		@GET("item")
+		Call<GetKunjungan> getkunjungan();
+
 	@FormUrlEncoded
 	@POST("kontak")
 	Call<PostPutDelForum> postKontak(@Field("nama") String nama,

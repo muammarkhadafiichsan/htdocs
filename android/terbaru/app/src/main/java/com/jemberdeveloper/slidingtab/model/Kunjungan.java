@@ -11,6 +11,7 @@ public class Kunjungan {
 	private String alamat;
 	@SerializedName("tanggung_jawab")
 	private String tanggung_jawab;
+
 	public String getId_kunjungan() {
 		return id_kunjungan;
 	}
