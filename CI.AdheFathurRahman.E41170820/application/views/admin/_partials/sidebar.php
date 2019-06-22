@@ -1,5 +1,11 @@
 <!-- Sidebar -->
-<ul class="sidebar navbar-nav">
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <ul class="sidebar navbar-nav">
     <li class="nav-item <?php echo $this->uri->segment(2) == '' ? 'active': '' ?>">
         <a class="nav-link" href="<?php echo site_url('admin') ?>">
             <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -29,3 +35,10 @@
             <span>Settings</span></a>
     </li>
 </ul>
+
+    
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+    </ul>
+    <!-- End of Sidebar -->
