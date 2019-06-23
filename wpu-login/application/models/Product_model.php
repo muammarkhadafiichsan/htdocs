@@ -6,7 +6,6 @@ class Product_model extends CI_Model
 
     public $product_id;
     public $name;
-    public $price;
     public $image = "default.jpg";
     public $description;
 
@@ -16,10 +15,6 @@ class Product_model extends CI_Model
             ['field' => 'name',
             'label' => 'Name',
             'rules' => 'required'],
-
-            ['field' => 'price',
-            'label' => 'Price',
-            'rules' => 'numeric'],
             
             ['field' => 'description',
             'label' => 'Description',
@@ -42,7 +37,6 @@ class Product_model extends CI_Model
         $post = $this->input->post();
         $this->product_id = uniqid();
         $this->name = $post["name"];
-        $this->price = $post["price"];
         $this->image = $this->_uploadImage();
         $this->description = $post["description"];
         $this->db->insert($this->_table, $this);
@@ -53,7 +47,6 @@ class Product_model extends CI_Model
         $post = $this->input->post();
         $this->product_id = $post["id"];
         $this->name = $post["name"];
-        $this->price = $post["price"];
         if (!empty($_FILES["image"]["name"])) {
             $this->image = $this->_uploadImage();
         } else {

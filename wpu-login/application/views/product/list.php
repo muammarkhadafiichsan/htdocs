@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-	<?php $this->load->view("templates/header.php") ?>
+	<?php $this->load->view("templates/user/header.php") ?>
 </head>
 
 <body id="page-top">
 
-	<?php $this->load->view("templates/topbar.php") ?>
+	<?php $this->load->view("templates/user/topbar.php") ?>
 	<div id="wrapper">
 
-		<?php $this->load->view("templates/siderbar.php") ?>
+		<?php $this->load->view("templates/user/siderbar.php") ?>
 
 		<div id="content-wrapper">
 
@@ -21,7 +21,7 @@
 				<!-- DataTables -->
 				<div class="card mb-3">
 					<div class="card-header">
-						<a href="<?php echo site_url('admin/products/add') ?>"><i class="fas fa-plus"></i> Add New</a>
+						<a href="<?php echo site_url('products/add') ?>"><i class="fas fa-plus"></i> Add New</a>
 					</div>
 					<div class="card-body">
 
@@ -30,7 +30,6 @@
 								<thead>
 									<tr>
 										<th>Name</th>
-										<th>Price</th>
 										<th>Photo</th>
 										<th>Description</th>
 										<th>Action</th>
@@ -43,17 +42,14 @@
 											<?php echo $product->name ?>
 										</td>
 										<td>
-											<?php echo $product->price ?>
-										</td>
-										<td>
 											<img src="<?php echo base_url('upload/product/'.$product->image) ?>" width="64" />
 										</td>
 										<td class="small">
 											<?php echo substr($product->description, 0, 120) ?>...</td>
 										<td width="250">
-											<a href="<?php echo site_url('admin/products/edit/'.$product->product_id) ?>"
+											<a href="<?php echo site_url('products/edit/'.$product->product_id) ?>"
 											 class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-											<a onclick="deleteConfirm('<?php echo site_url('admin/products/delete/'.$product->product_id) ?>')"
+											<a onclick="deleteConfirm('<?php echo site_url('products/delete/'.$product->product_id) ?>')"
 											 href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
 										</td>
 									</tr>
@@ -69,7 +65,7 @@
 			<!-- /.container-fluid -->
 
 			<!-- Sticky Footer -->
-			<?php $this->load->view("admin/_partials/footer.php") ?>
+			<?php $this->load->view("templates/footer.php") ?>
 
 		</div>
 		<!-- /.content-wrapper -->
@@ -78,10 +74,10 @@
 	<!-- /#wrapper -->
 
 
-	<?php $this->load->view("admin/_partials/scrolltop.php") ?>
-	<?php $this->load->view("admin/_partials/modal.php") ?>
+	<?php $this->load->view("templates/scrolltop.php") ?>
+	<?php $this->load->view("templates/modal.php") ?>
 
-	<?php $this->load->view("admin/_partials/js.php") ?>
+	<?php $this->load->view("templates/js.php") ?>
 
 	<script>
 function deleteConfirm(url){

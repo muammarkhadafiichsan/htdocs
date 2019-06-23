@@ -2,21 +2,21 @@
 <html lang="en">
 
 <head>
-	<?php $this->load->view("admin/_partials/head.php") ?>
+	<?php $this->load->view("templates/user/header.php") ?>
 </head>
 
 <body id="page-top">
 
-	<?php $this->load->view("admin/_partials/navbar.php") ?>
+	<?php $this->load->view("templates/user/topbar.php") ?>
 	<div id="wrapper">
 
-		<?php $this->load->view("admin/_partials/sidebar.php") ?>
+		<?php $this->load->view("templates/user/siderbar.php") ?>
 
 		<div id="content-wrapper">
 
 			<div class="container-fluid">
 
-				<?php $this->load->view("admin/_partials/breadcrumb.php") ?>
+				<?php $this->load->view("templates/breadcrumb.php") ?>
 
 				<?php if ($this->session->flashdata('success')): ?>
 				<div class="alert alert-success" role="alert">
@@ -26,11 +26,11 @@
 
 				<div class="card mb-3">
 					<div class="card-header">
-						<a href="<?php echo site_url('admin/products/') ?>"><i class="fas fa-arrow-left"></i> Back</a>
+						<a href="<?php echo site_url('products') ?>"><i class="fas fa-arrow-left"></i> Back</a>
 					</div>
 					<div class="card-body">
 
-						<form action="<?php base_url('admin/product/add') ?>" method="post" enctype="multipart/form-data" >
+						<form action="<?php base_url('product/add') ?>" method="post" enctype="multipart/form-data" >
 							<div class="form-group">
 								<label for="name">Name*</label>
 								<input class="form-control <?php echo form_error('name') ? 'is-invalid':'' ?>"
@@ -39,26 +39,7 @@
 									<?php echo form_error('name') ?>
 								</div>
 							</div>
-
-							<div class="form-group">
-								<label for="price">Price*</label>
-								<input class="form-control <?php echo form_error('price') ? 'is-invalid':'' ?>"
-								 type="number" name="price" min="0" placeholder="Product price" />
-								<div class="invalid-feedback">
-									<?php echo form_error('price') ?>
-								</div>
-							</div>
-
-
-							<div class="form-group">
-								<label for="name">Photo</label>
-								<input class="form-control-file <?php echo form_error('price') ? 'is-invalid':'' ?>"
-								 type="file" name="image" />
-								<div class="invalid-feedback">
-									<?php echo form_error('image') ?>
-								</div>
-							</div>
-
+							
 							<div class="form-group">
 								<label for="name">Description*</label>
 								<textarea class="form-control <?php echo form_error('description') ? 'is-invalid':'' ?>"
@@ -67,6 +48,17 @@
 									<?php echo form_error('description') ?>
 								</div>
 							</div>
+
+							<div class="form-group">
+								<label for="name">Photo</label>
+								<input class="form-control-file <?php echo form_error('name') ? 'is-invalid':'' ?>"
+								 type="file" name="image" />
+								<div class="invalid-feedback">
+									<?php echo form_error('image') ?>
+								</div>
+							</div>
+
+							
 
 							<input class="btn btn-success" type="submit" name="btn" value="Save" />
 						</form>
@@ -82,7 +74,7 @@
 				<!-- /.container-fluid -->
 
 				<!-- Sticky Footer -->
-				<?php $this->load->view("admin/_partials/footer.php") ?>
+				<?php $this->load->view("templates/footer.php") ?>
 
 			</div>
 			<!-- /.content-wrapper -->
@@ -91,9 +83,9 @@
 		<!-- /#wrapper -->
 
 
-		<?php $this->load->view("admin/_partials/scrolltop.php") ?>
+		<?php $this->load->view("templates/scrolltop.php") ?>
 
-		<?php $this->load->view("admin/_partials/js.php") ?>
+		<?php $this->load->view("templates/js.php") ?>
 
 </body>
 
