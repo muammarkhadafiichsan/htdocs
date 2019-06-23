@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 22 Jun 2019 pada 10.44
--- Versi server: 10.1.32-MariaDB
--- Versi PHP: 7.2.5
+-- Generation Time: Jun 23, 2019 at 07:58 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,82 +25,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `products`
 --
 
-CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
-  `name` varchar(128) NOT NULL,
-  `email` varchar(128) NOT NULL,
-  `image` varchar(128) NOT NULL,
-  `password` varchar(256) NOT NULL,
-  `role_id` int(11) NOT NULL,
-  `is_active` int(1) NOT NULL,
-  `date_created` int(11) NOT NULL
+CREATE TABLE `products` (
+  `product_id` varchar(64) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL,
+  `image` varchar(255) NOT NULL DEFAULT 'default.jpg',
+  `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `products`
 --
 
-INSERT INTO `user` (`id`, `name`, `email`, `image`, `password`, `role_id`, `is_active`, `date_created`) VALUES
-(1, 'freeofcocgems', 'khadafi.ichsan99@gmail.com', 'default.jpg', '$2y$10$r9uoXybp15jyUpSzuZ5fieX3oDviCmMmsd027mGs68wXFV9njeYa.', 2, 1, 1561111172),
-(2, 'ega', 'ega@gmail.com', 'default.jpg', '$2y$10$9vImUKMcj7RAw9qZ14NO4.vbAMuulWzDyqH2a0noxw1SBo8biJvfG', 2, 0, 1561120687),
-(3, 'rian', 'rian@gmail.com', 'default.jpg', '$2y$10$OJtLsIOkcX2U8uCpPXki0.80aTkjsh7AZRlmL5VV/kzrRqWURA3re', 2, 1, 1561120731),
-(4, 'fahmi', 'fahmi@gmail.com', 'default.jpg', '$2y$10$rm0mHbiMVqBxWKBD2xhuS.e6RZJ0wusjLtBTUCIJLhLa/viF4hURy', 2, 1, 1561130045),
-(5, 'febrero', 'feb@gmail.com', 'default.jpg', '$2y$10$xeD3TVdMeiLMKbzf/5KTI.5WrSz2yggMnXn3qUOqPLs5cYFYMdjwK', 2, 1, 1561177695),
-(6, 'ade', 'ade@gmail.com', 'default.jpg', '$2y$10$EfTQBYKqTRLdFi.Y5felg.w0Fea2Ewilh3DH6O99S6kMqxca6zfJa', 2, 1, 1561191229);
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `user_role`
---
-
-CREATE TABLE `user_role` (
-  `id` int(11) NOT NULL,
-  `role` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `user_role`
---
-
-INSERT INTO `user_role` (`id`, `role`) VALUES
-(1, 'Administrator'),
-(2, 'member');
-
---
--- Indexes for dumped tables
---
-
---
--- Indeks untuk tabel `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indeks untuk tabel `user_role`
---
-ALTER TABLE `user_role`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT untuk tabel yang dibuang
---
-
---
--- AUTO_INCREMENT untuk tabel `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT untuk tabel `user_role`
---
-ALTER TABLE `user_role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+INSERT INTO `products` (`product_id`, `name`, `price`, `image`, `description`) VALUES
+('5cedee5217099', 'wow', 1, '5cedee5217099.jpg', 'a');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
