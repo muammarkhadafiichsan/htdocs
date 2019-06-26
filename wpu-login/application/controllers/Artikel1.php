@@ -17,7 +17,7 @@ class Artikel1 extends REST_Controller
     //Menampilkan data kontak
     function index_get()
     {
-        $product_id = $this->get('id');
+        $product_id = $this->get('product_id');
         if ($product_id == '') {
             $wpu_login = $this->db->get('products')->result();
         } else {
