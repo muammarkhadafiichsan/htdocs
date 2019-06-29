@@ -17,8 +17,17 @@ class Artikel1 extends REST_Controller
     //Menampilkan data kontak
     function index_get()
     {
-        $kontak = $this->db->get('products')->result();
-        $this->response(array("result" => $kontak, 200));
+<<<<<<< HEAD
+        
+        $product_id = $this->get('product_id');
+        if ($product_id == '') {
+            $wpu_login = $this->db->get('products')->result();
+        } else {
+            $this->db->where('id', $product_id);
+            $wpu_login = $this->db->get('products')->result();
+        }
+        $this->response($wpu_login, 200);
+>>>>>>> 17634251e7c513c9802af8efc0d3ca171dca8638
     }
 
     //Masukan function selanjutnya disini
