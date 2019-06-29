@@ -1,4 +1,5 @@
 package com.jemberdeveloper.slidingtab.rest;
+
 import com.jemberdeveloper.slidingtab.model.GetForum;
 import com.jemberdeveloper.slidingtab.model.GetKunjungan;
 import com.jemberdeveloper.slidingtab.model.PostPutDelForum;
