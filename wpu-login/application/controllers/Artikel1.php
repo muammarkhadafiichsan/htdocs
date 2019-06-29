@@ -27,7 +27,6 @@ class Artikel1 extends REST_Controller
             $wpu_login = $this->db->get('products')->result();
         }
         $this->response($wpu_login, 200);
->>>>>>> 17634251e7c513c9802af8efc0d3ca171dca8638
 
     }
 
