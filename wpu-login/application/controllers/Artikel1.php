@@ -17,7 +17,7 @@ class Artikel1 extends REST_Controller
     //Menampilkan data kontak
     function index_get()
     {
-<<<<<<< HEAD
+
         
         $product_id = $this->get('product_id');
         if ($product_id == '') {
@@ -28,6 +28,7 @@ class Artikel1 extends REST_Controller
         }
         $this->response($wpu_login, 200);
 >>>>>>> 17634251e7c513c9802af8efc0d3ca171dca8638
+
     }
 
     //Masukan function selanjutnya disini
