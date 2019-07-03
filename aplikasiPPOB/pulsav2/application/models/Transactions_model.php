@@ -173,6 +173,8 @@ class Transactions_model extends CI_Model {
 		$this->db->delete($this->table_name);
 	}
 
-}
+	//membuat JSON nomor dan pesan
 
-?>
+		
+
+}
