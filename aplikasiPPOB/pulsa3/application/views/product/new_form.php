@@ -29,7 +29,7 @@
 						<!-- add form -->
 						<div class="card mb-3">
                         <div class="card-header">
-                            <a href="<?php echo site_url('products/') ?>"><i class="fas fa-arrow-left"></i> List Pembelian</a>
+                            <a href="<?php echo site_url('pulsa/') ?>"><i class="fas fa-arrow-left"></i> List Pembelian</a>
                         </div>
                         <div class="card-body">
 
