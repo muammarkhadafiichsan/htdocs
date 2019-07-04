@@ -63,7 +63,7 @@
                                                 <?php echo $pulsa->tanggal ?>
                                             </td>
                                             <td>
-                                                <?php echo $pulsa->nomor ?><br> <?php echo $pulsa->nomor2 ?>
+                                                <?php echo $pulsa->nomor ?>
                                             </td>
                                             <td>
                                                 <?php echo $pulsa->operator ?>
