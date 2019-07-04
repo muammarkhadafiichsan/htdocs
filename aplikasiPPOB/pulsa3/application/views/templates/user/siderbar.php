@@ -29,15 +29,15 @@
      <hr class="sidebar-divider my-0">
 
      </li>
-    <li class="nav-item dropdown show<?php echo $this->uri->segment(2) == 'products' ? 'active': '' ?>">
+    <li class="nav-item dropdown show<?php echo $this->uri->segment(2) == 'pulsa' ? 'active': '' ?>">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="true">
             <i class="fas fa-fw fa-boxes"></i>
             <span>Products</span>
         </a>
         <div class="dropdown-menu show" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="<?php echo site_url('products/add') ?>">Beli Pulsa</a>
-            <a class="dropdown-item" href="<?php echo site_url('products') ?>">List Pembelian</a>
+            <a class="dropdown-item" href="<?php echo site_url('pulsa/add') ?>">Beli Pulsa</a>
+            <a class="dropdown-item" href="<?php echo site_url('pulsa') ?>">List Pembelian</a>
         </div>
     </li>
      <!-- Heading -->

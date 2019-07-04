@@ -6,7 +6,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-code"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Web Dinas Peternakan</div>
+                <div class="sidebar-brand-text mx-3">Pulsa</div>
             </a>
 
             <!-- Divider -->
