@@ -73,13 +73,6 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="nomor2">Nomor</label>
-                                    <input class="form-control" type="text" name="nomor2" id="nomor2" placeholder="Nomor HP" />
-                                    <div class="invalid-feedback">
-                                        <?php echo form_error('nomor2') ?>
-                                    </div>
-                                </div>
 
                                 <div class="form-group">
                                     <label for="id_operator">Operator</label><br>
