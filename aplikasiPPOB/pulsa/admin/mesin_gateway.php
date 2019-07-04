@@ -1,6 +1,6 @@
 <?php
 
-$data = array("no" => "081295497313", "pesan" => "SMS dari PHP");
+$data = array("no" => "085954534371", "pesan" => "SMS dari PHP");
 $data_string = json_encode($data);
 
 $ch = curl_init('http://192.168.43.1:8000');
