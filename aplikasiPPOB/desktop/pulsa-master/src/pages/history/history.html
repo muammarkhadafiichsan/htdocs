@@ -1,0 +1,68 @@
+<!--
+Generated template for the HistoryPage page.
+
+See http://ionicframework.com/docs/components/#navigation for more info on
+Ionic pages and navigation.
+-->
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Riwayat penjualan</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<ion-item>
+		<ion-label>Tampilkan data berdasarkan</ion-label>
+		<ion-select [(ngModel)]="variable.how_to_show_data" interface="action-sheet" (ionChange)="updateFilter()">
+			<ion-option value="all">Semua data</ion-option>
+			<ion-option value="month">Bulan ini</ion-option>
+			<ion-option value="choose">Pilih tanggal</ion-option>
+		</ion-select>
+	</ion-item>
+
+	<div *ngIf="variable.how_to_show_data == 'choose'">
+		<ion-item>
+			<ion-label>Tanggal awal</ion-label>
+			<ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD" [(ngModel)]="variable.timeStarts"></ion-datetime>
+		</ion-item>
+		<ion-item>
+			<ion-label>Tanggal akhir</ion-label>
+			<ion-datetime displayFormat="YYYY-MM-DD" pickerFormat="YYYY-MM-DD" [(ngModel)]="variable.timeEnd"></ion-datetime>
+		</ion-item>
+		<ion-item>
+            <button type="submit" ion-button color="primary" block (click) = "updateFilter(true, true)">Tampilkan berdasarkan tanggal</button>
+		</ion-item>
+	</div>
+
+	<div>
+		<!-- <ion-list *ngSwitchCase="'center'">
+            <button ion-item *ngFor="let item of smsCenterList" (click)="openNumberPanel(item.doc)">
+                {{ item.doc.name_contact }} <ion-icon name="arrow-forward" item-end></ion-icon>
+            </button>  
+            <div style="text-align: center;" *ngIf="smsCenterList.length < 1"> Tidak ada SMS Center ditemukan </div>
+            <ion-fab right bottom>
+                <button ion-fab color="danger" (click)="openNumberPanel(false)"><ion-icon name="add"></ion-icon></button>
+            </ion-fab>
+        </ion-list> -->
+
+		<ion-list >
+			<div *ngIf="datalogs.length < 1" style="text-align: center; margin-top: 20px;">
+				Tidak ada data penjualan yang ditemukan.
+			</div>
+			<ion-item *ngFor="let item of datalogs" (click)="openHistory(item)">
+				<ion-avatar item-start>
+					<ion-icon name="person" item-start *ngIf="!item.contact || !item.contact.photos || item.contact.photos.length < 1"></ion-icon>
+					<img [src]="sanitizeImage(item.contact.photos[0].value)" *ngIf="item.contact && item.contact.photos && item.contact.photos.length > 0">
+				</ion-avatar>
+				<h2>{{item.doc.credit_detail.number}}</h2>
+				<p>{{item.doc.human_time}} &middot; Rp. {{item.doc.nominal_detail.nominal_value_rupiah}}</p>
+				<ion-icon name="arrow-forward" item-end></ion-icon>
+			</ion-item>
+		</ion-list>
+	</div>
+
+</ion-content>

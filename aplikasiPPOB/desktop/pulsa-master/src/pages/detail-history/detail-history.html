@@ -1,0 +1,80 @@
+<!--
+Generated template for the DetailHistoryPage page.
+
+See http://ionicframework.com/docs/components/#navigation for more info on
+Ionic pages and navigation.
+-->
+<ion-header>
+
+	<ion-navbar>
+		<ion-title>detail History</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div padding>
+        <ion-segment [(ngModel)]="variables.settingsTab">
+            <ion-segment-button value="dashboard">
+                Detail
+            </ion-segment-button>
+            <ion-segment-button value="pembayaran">
+                Pembayaran
+            </ion-segment-button>
+        </ion-segment>      
+    </div>
+    <div [ngSwitch]="variables.settingsTab">
+        <ion-list *ngSwitchCase="'dashboard'">
+
+            <ion-card>
+
+				<ion-item>
+					<ion-avatar item-start>
+						<img src="../assets/imgs/avatarnone.jpg" *ngIf="!datahistory.is_contact ">
+						<span *ngIf="datahistory.is_contact">						
+							<img [src]="sanitizeImage(datahistory.contact.photos[0].value)" *ngIf="datahistory.contact.photos">
+						</span>
+					</ion-avatar>
+					<h2 *ngIf="datahistory.is_contact">{{datahistory.contact.displayName}}</h2>
+					<h2 *ngIf="!datahistory.is_contact">{{datahistory.credit_detail.number}}</h2>
+					<p>{{readable_time(datahistory.created_at)}}</p>
+				</ion-item>
+
+				<ion-card-content>
+					<ion-list>
+						<ion-item>
+							Pulsa
+							<span item-end>Rp. {{datahistory.nominal_detail.nominal_value_rupiah}}</span>
+						</ion-item>
+						<ion-item>
+							<ion-label>Klik untuk ganti status</ion-label>
+							<ion-select [(ngModel)]="datahistory.status" interface="action-sheet" (ionChange) = "statusOnChange()">
+								<ion-option value="hutang">Hutang</ion-option>
+								<ion-option value="cicil">Cicil</ion-option>
+								<ion-option value="lunas">Lunas</ion-option>
+							</ion-select>
+						</ion-item>
+					</ion-list>
+				</ion-card-content>
+
+			</ion-card>
+			<div padding *ngIf="datahistory.status == 'cicil'">
+		        <button type="button" ion-button color="danger" block (click)="statusOnChange()"> Tambah cicilan </button>
+		    </div> 
+
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'pembayaran'">
+            <ion-list>
+			  <ion-item *ngFor="let item of datahistory.pembayaran">
+			    <span item-end>{{item.pada}}</span>
+			    <span>{{item.jumlah}}</span>
+			  </ion-item>  
+			</ion-list>
+        </ion-list>
+
+        
+    </div>
+	
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Home</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form (ngSubmit)="sendMessageCredit()">
+        <ion-list>
+
+            <ion-item>
+                <ion-label floating>Nomor handphone pembeli</ion-label>
+                <ion-input type="tel" name="numberPembeli" [(ngModel)]="credit.number" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <button ion-button small type="button" (click)="openContact()">Cari dalam kontak</button>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Nominal Pulsa</ion-label>
+                <ion-select [(ngModel)]="credit.nominal" name="nominal" interface="action-sheet" required>
+                    <ion-option value="{{item.doc._id}}" *ngFor="let item of nominalList" >Rp. {{item.doc.nominal_value_rupiah}}</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>SMS Center</ion-label>
+                <ion-select [(ngModel)]="credit.smscenter" name="smscenter" interface="action-sheet">
+                    <ion-option value="{{item.doc._id}}" *ngFor="let item of smsCenterList" >{{item.doc.number_contact}}</ion-option>
+                </ion-select>
+            </ion-item>
+            <div padding>
+                <button type="submit" ion-button color="primary" block>Kirim</button>
+            </div>
+
+        </ion-list>
+    </form>
+</ion-content>

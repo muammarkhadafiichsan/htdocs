@@ -1,0 +1,40 @@
+<!--
+  Generated template for the NominalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>nominal</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="simpanNominal()">
+		
+	<ion-item>
+        <ion-label stacked>Nominal</ion-label>
+        <ion-input type="number" [(ngModel)]="datanominal.nominal_value" name="nominal_value" placeholder="Contoh : 5000"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Harga default</ion-label>
+        <ion-input type="number" [(ngModel)]="datanominal.default_price" name="default_price" placeholder="Contoh : 5500"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Kode pulsa</ion-label>
+        <ion-input type="text" [(ngModel)]="datanominal.code" name="default_price" placeholder="Contoh : IND 5 untuk Ind*sat 5000"></ion-input>
+      </ion-item>
+      
+      <div padding>
+        <button type="submit" ion-button color="primary" block>Tambahkan</button>
+      </div>
+	</form>
+
+</ion-content>
+

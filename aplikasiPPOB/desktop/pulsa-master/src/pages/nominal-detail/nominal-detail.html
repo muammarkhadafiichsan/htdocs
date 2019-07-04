@@ -1,0 +1,35 @@
+<!--
+  Generated template for the NominalDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>nominalDetail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<form (ngSubmit)="updateNominal()"> 
+		
+	<ion-item>
+        <ion-label floating>Nominal</ion-label>
+        <ion-input type="number" [(ngModel)]="datanominal.nominal_value" name="nominal_value"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Harga default</ion-label>
+        <ion-input type="number" [(ngModel)]="datanominal.default_price" name="default_price"></ion-input>
+      </ion-item>
+      
+      <div padding>
+        <button type="submit" ion-button color="primary" block>Perbarui Nominal</button>
+        <button type="button" ion-button color="danger" block (click)="removeNominal()">Hapus</button>
+      </div>
+	</form>
+
+</ion-content>

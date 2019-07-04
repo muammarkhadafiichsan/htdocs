@@ -1,0 +1,7 @@
+
+Nama : 
+Alamat : 
+Phone : 
+Pesanan :
+ - Steak
+Total Pembayaran :50000.0
