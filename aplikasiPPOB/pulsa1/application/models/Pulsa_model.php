@@ -135,11 +135,13 @@ class Pulsa_model extends CI_Model
 
 
         //membuat JSON nomor dan pesan
-        $data = array("no" => $post["nomor"], "pesan" => "Pelanggan Yth, Isi Pulsa " . $operator . " senilai Rp." . $nominal . " SUKSES, Kode: " . $kode . ". Isi ulang terus untuk memperpanjang masa aktiv nomor kamu");
+        $data = array("no" => $post["nomor"], "pesan" => "Pelanggan Yth, pulsa terisi " . $operator . " senilai Rp." . $nominal . " SUKSES, Kode: " . $kode . ". Isi terus pulsa anda untuk masa aktif yang lebih panjang");
         $data_string = json_encode($data);
 
         //cek apakah jika transaksi BERHASIL maka akan mengirim JSON data ke SMSGateway Server
         if ($status == "BERHASIL") {
+
+
             $ch = curl_init('http://' . $ip . ':' . $port . '');
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
             curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
