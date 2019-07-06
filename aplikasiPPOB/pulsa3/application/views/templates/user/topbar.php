@@ -6,7 +6,7 @@
 
          <!-- Topbar -->
          <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-         <a class="navbar-brand mr-1" href="<?php echo site_url('admin') ?>">JURAGAN PULSA</a>
+             <a class="navbar-brand mr-1" href="<?php echo site_url('admin') ?>">JURAGAN PULSA</a>
 
              <!-- Sidebar Toggle (Topbar) -->
              <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -15,12 +15,12 @@
 
              <!-- Topbar Navbar -->
              <ul class="navbar-nav ml-auto">
-            
+
 
                  <!-- Nav Item - User Information -->
                  <li class="nav-item dropdown no-arrow">
                      <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                         
+
                          <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                      </a>
                      <!-- Dropdown - User Information -->
