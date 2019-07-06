@@ -13,8 +13,7 @@
         <activity android:name=".DetailGaleri"></activity>
         <activity android:name=".DetailArtikel" />
         <activity android:name=".Kerjasama" />
-        <activity android:name=".KunjunganUnggas" />
-        <activity android:name=".ForumUnggas" />
+		<activity android:name=".ForumUnggas" />
         <activity android:name=".Register" />
         <activity android:name=".Login" />
         <activity android:name=".DetailForumUnggas" />
