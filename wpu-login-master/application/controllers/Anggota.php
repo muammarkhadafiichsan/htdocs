@@ -32,19 +32,7 @@ class Anggota extends CI_Controller
         $this->load->view("user/new_form_anggota");
     }
 
-    public function sms()
-    {
-        $anggota_puskeswan = $this->anggota_model;
-        $validation = $this->form_validation;
-        $validation->set_rules($anggota_puskeswan->rules());
-
-        if ($validation->run()) {
-            $anggota_puskeswan->save();
-            $this->session->set_flashdata('success', 'Berhasil disimpan');
-        }
-
-        $this->load->view("user/sms");
-    }
+    
 
     public function edit($id = null)
     {
