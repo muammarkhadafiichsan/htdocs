@@ -1,0 +1,20 @@
+<resources>
+	<string name="app_name">SlidingTab</string>
+
+	<!-- TODO: Remove or change this placeholder text -->
+	<string name="hello_blank_fragment">Hello blank fragment</string>
+	<string name="peternakan">Disini menawarkan berbagai fasilitas seperti halnya forum bisnis,
+		kunjungan ternak,Jual beli dan upt atau lab yang nantinya akan mempermudah para peternak
+		dalam mengembangkan usahanya tersebut jadi jangan lupa daftarkan diri anda sekarang
+	</string>
+	<string name="title_artikel">artikel</string>
+	<string name="nama_artikel">nama_artikel</string>
+	<string name="Artikel_info_placeholder">Artikelinfo</string>
+	<string name="title_galeri">title_galeri</string>
+	<string name="nama_galeri">nama_galeri</string>
+	<string name="galeri_info_placeholder">galeri_info</string>
+	<string name="news_placeholder">placeholder</string>
+	<string name="title_placeholder">title_placeholder</string>
+	<string name="subtitle_detail_text">detail_text</string>
+
+</resources>
