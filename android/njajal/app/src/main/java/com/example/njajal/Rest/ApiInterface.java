@@ -1,5 +1,6 @@
 package com.example.njajal.Rest;
 
+import com.example.njajal.Model.GetArtikel;
 import com.example.njajal.Model.GetForum;
 import com.example.njajal.Model.GetKunjungan;
 import com.example.njajal.Model.PostPutDelForum;
@@ -14,12 +15,12 @@ import retrofit2.http.PUT;
 
 public interface ApiInterface {
 
-    @GET("item")
-    Call<GetKunjungan> getkunjungan();
+    @GET("products")
+    Call<GetArtikel> getArtikel();
 
     @FormUrlEncoded
     @POST("kontak")
-    Call<PostPutDelForum> postKontak(@Field("nama") String nama,
+    Call<PostPutDelForum> postKontak(@Field("name") String nama,
                                      @Field("nomor") String nomor);
     @FormUrlEncoded
     @PUT("kontak")

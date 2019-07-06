@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         ColorStateList colors;
-        if (Build.VERSION.SDK_INT >= 23) {
+        if (Build.VERSION.SDK_INT >= 28) {
             colors = getResources().getColorStateList(R.drawable.tab_icon, getTheme());
         }
         else {

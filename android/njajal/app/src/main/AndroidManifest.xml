@@ -11,8 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".DetailGaleri"></activity>
-        <activity android:name=".DetailArtikel" />
-        <activity android:name=".Kerjasama" />
+		<activity android:name=".Kerjasama" />
 		<activity android:name=".ForumUnggas" />
         <activity android:name=".Register" />
         <activity android:name=".Login" />
@@ -21,6 +20,8 @@
         <activity android:name=".Labupt" />
         <activity android:name=".KunjunganTernak" />
         <activity android:name=".ForumBisnis" />
+		<activity android:name=".DetailArtikel" />
+		<activity android:name=".SatuFragment" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
