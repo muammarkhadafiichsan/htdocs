@@ -13,15 +13,21 @@
 
                 <form action="<?php base_url('product/add') ?>" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="name">Name*</label>
+                        <label for="name">Nama Kepala*</label>
                         <input class="form-control" type="text" name="name" placeholder="Product name" />
                         <div class="invalid-feedback">
 
                         </div>
                     </div>
-
                     <div class="form-group">
-                        <label for="name">Description*</label>
+                                    <label for="TTL">Tempat/Tanggal Lahir</label>
+                                    <input class="form-control" type="text" name="TTL" id="TTL" placeholder="TTL" />
+                                    <div class="invalid-feedback">
+                                        <?php echo form_error('TTL') ?>
+                                    </div>
+                                </div>
+                    <div class="form-group">
+                        <label for="name">Deskripsi*</label>
                         <textarea class="form-control " name="description" placeholder="Product description..."></textarea>
                         <div class="invalid-feedback">
                             <?php echo form_error('description') ?>

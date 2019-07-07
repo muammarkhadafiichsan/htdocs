@@ -6,6 +6,7 @@ class Product_model extends CI_Model
 
     public $id_puskeswan;
     public $nama_kepala;
+    public $TTL;
     public $image = "default.jpg";
     public $deskripsi;
 
@@ -47,6 +48,7 @@ class Product_model extends CI_Model
         $post = $this->input->post();
         $this->id_puskeswan = uniqid();
         $this->nama_kepala = $post["nama_kepala"];
+        $this->TTL = $post["TTL"];
         $this->image = $this->_uploadImage();
         $this->deskripsi = $post["deskripsi"];
         $this->db->insert($this->_table, $this);
@@ -57,6 +59,7 @@ class Product_model extends CI_Model
         $post = $this->input->post();
         $this->id_puskeswan = $post["id"];
         $this->nama_kepala = $post["nama_kepala"];
+        $this->TTL = $post["TTL"];
         if (!empty($_FILES["image"]["nama_kepala"])) {
             $this->image = $this->_uploadImage();
         } else {
