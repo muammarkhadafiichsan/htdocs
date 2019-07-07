@@ -1,6 +1,5 @@
 package com.example.dinaspeternakan;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -32,16 +31,9 @@ public class EmpatFragment extends Fragment implements View.OnClickListener{
 		return  view;
 	}
 
-	public void onClick(View view) {
-		if(view == kerjasama){
-			Intent intent =new Intent(getActivity(),Kerjasama.class);
-			startActivity(intent);
-		}
 
-		if(view == keranjang){
-			Intent intent =new Intent(getActivity(),Keranjang.class);
-			startActivity(intent);
-		}
+	@Override
+	public void onClick(View v) {
 
 	}
 }

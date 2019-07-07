@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class ApiClient {
-    public static final String BASE_URL = "http://192.168.1.17/CI.3.E41171807_P4/index.php/";
+    public static final String BASE_URL = "http://192.168.0.109/wpu-login-master/index.php/";
     private static Retrofit retrofit = null;
     public static Retrofit getClient() {
         if (retrofit==null) {

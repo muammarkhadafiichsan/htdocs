@@ -1,20 +1,20 @@
 package com.example.dinaspeternakan;
 
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
+import android.view.ViewGroup;
 
-import com.example.njajal.Adapter.ArtikelAdapter;
-import com.example.njajal.Model.Artikel;
-import com.example.njajal.Model.GetArtikel;
-import com.example.njajal.Rest.ApiClient;
-import com.example.njajal.Rest.ApiInterface;
+import com.example.dinaspeternakan.Adapter.ArtikelAdapter;
+import com.example.dinaspeternakan.Model.Artikel;
+import com.example.dinaspeternakan.Model.GetArtikel;
+import com.example.dinaspeternakan.Rest.ApiClient;
+import com.example.dinaspeternakan.Rest.ApiInterface;
 
 import java.util.List;
 
@@ -22,32 +22,31 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class SatuFragment extends AppCompatActivity {
-	Button btIns;
+public class SatuFragment extends Fragment {
+
 	ApiInterface mApiInterface;
 	private RecyclerView mRecyclerView;
 	private RecyclerView.Adapter mAdapter;
 	private RecyclerView.LayoutManager mLayoutManager;
 	public static SatuFragment ma;
+	public SatuFragment() {
+		// Required empty public constructor
+	}
+
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+							 Bundle savedInstanceState) {
+		// Inflate the layout for this fragment
+		View myFragmentView = inflater.inflate(R.layout.fragment_satu, container, false);
 
-		btIns = (Button) findViewById(R.id.btndetail);
-		btIns.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				startActivity(new Intent(SatuFragment.this, DetailArtikel.class));
-			}
-		});
-		mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-		mLayoutManager = new LinearLayoutManager(this);
+		mRecyclerView = (RecyclerView) myFragmentView.findViewById(R.id.recyclerView);
+		mLayoutManager = new GridLayoutManager(getActivity(),2);
 		mRecyclerView.setLayoutManager(mLayoutManager);
 		mApiInterface = ApiClient.getClient().create(ApiInterface.class);
-		ma=this;
+
 		refresh();
+		return myFragmentView;
 	}
 
 	public void refresh() {
@@ -56,9 +55,9 @@ public class SatuFragment extends AppCompatActivity {
 			@Override
 			public void onResponse(Call<GetArtikel> call, Response<GetArtikel>
 					response) {
-				List<Artikel> ArtikelkList = response.body().getListDataArtikel();
-				Log.d("Retrofit Get", "Jumlah data : " +String.valueOf(ArtikelkList.size()));
-				mAdapter = new ArtikelAdapter(ArtikelkList);
+				List<Artikel> KontakList = response.body().getListDataArtikel();
+				Log.d("Retrofit Get", "Jumlah : " +String.valueOf(KontakList.size()));
+				mAdapter = new ArtikelAdapter(KontakList);
 				mRecyclerView.setAdapter(mAdapter);
 			}
 
@@ -68,6 +67,5 @@ public class SatuFragment extends AppCompatActivity {
 			}
 		});
 	}
-
 
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dinaspeternakan">
+	xmlns:tools="http://schemas.android.com/tools"
+	package="com.example.dinaspeternakan">
 
     <application
         android:allowBackup="true"
@@ -9,6 +10,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+		<activity android:name=".SatuFragment"/>
+		<activity android:name=".DetailArtikel"/>
+		<activity android:name=".DetailForumUnggas"/>
+		<activity android:name=".DetailGaleri"/>
+		<activity android:name=".ForumBisnis"/>
+		<activity android:name=".ForumUnggas"/>
+		<activity android:name=".KunjunganTernak"/>
+		<activity android:name=".LabBondowoso"/>
+		<activity android:name=".Labupt"/>
+		<activity android:name=".Login"/>
+		<activity android:name=".Register"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

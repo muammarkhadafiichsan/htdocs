@@ -9,24 +9,24 @@ import com.google.gson.annotations.SerializedName;
 
 public class Artikel {
 
-	@SerializedName("nama")
-	private String nama;
+	@SerializedName("name")
+	private String name;
 
 	public Artikel(){}
 
 	public Artikel(String nama) {
 
-		this.nama = nama;
+		this.name = nama;
 
 	}
 
 
 	public String getNama() {
-		return nama;
+		return name;
 	}
 
 	public void setNama(String nama) {
-		this.nama = nama;
+		this.name = nama;
 	}
 
 

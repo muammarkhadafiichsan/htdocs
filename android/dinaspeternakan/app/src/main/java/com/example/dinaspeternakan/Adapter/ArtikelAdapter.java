@@ -8,9 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.njajal.Model.Artikel;
-import com.example.njajal.R;
-import com.example.njajal.SatuFragment;
+import com.example.dinaspeternakan.Model.Artikel;
+import com.example.dinaspeternakan.R;
+import com.example.dinaspeternakan.SatuFragment;
 
 import java.util.List;
 
@@ -34,7 +34,7 @@ public class ArtikelAdapter extends RecyclerView.Adapter<ArtikelAdapter.MyViewHo
 
 	@Override
 	public void onBindViewHolder (MyViewHolder holder,final int position){
-		holder.mTextViewNama.setText("Nama = " + mArtikelList.get(position).getNama());
+		holder.mTextViewName.setText("Nama = " + mArtikelList.get(position).getNama());
 
 		holder.itemView.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -52,11 +52,11 @@ public class ArtikelAdapter extends RecyclerView.Adapter<ArtikelAdapter.MyViewHo
 	}
 
 	public class MyViewHolder extends RecyclerView.ViewHolder {
-		public TextView  mTextViewNama;
+		public TextView  mTextViewName;
 
 		public MyViewHolder(View itemView) {
 			super(itemView);
-			mTextViewNama = (TextView) itemView.findViewById(R.id.tvNama);
+			mTextViewName = (TextView) itemView.findViewById(R.id.tvJudul);
 
 		}
 	}

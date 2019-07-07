@@ -14,11 +14,11 @@ class Artikel1 extends REST_Controller
         $this->load->database();
     }
 
-    //Menampilkan data kontak
+    //Menampilkan data Artikel
     function index_get()
     {
-        $kontak = $this->db->get('products')->result();
-        $this->response(array("result" => $kontak, 200));
+        $Artikel = $this->db->get('products')->result();
+        $this->response(array("result" => $Artikel, 200));
     }
 
     //Masukan function selanjutnya disini
