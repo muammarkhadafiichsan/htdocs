@@ -50,7 +50,7 @@ class Auth extends CI_Controller
                     $this->session->set_userdata($data);
                     if ($user['role_id'] == 1) {
                         redirect('admin');
-                    } else {
+                    } else if ($user['role_id'] == 2) {
                         redirect('user');
                     }
                 } else {
@@ -135,7 +135,7 @@ class Auth extends CI_Controller
 
         $this->email->initialize($config);
 
-        $this->email->from('maxday4nd@gmail.com', 'Web Programming UNPAS');
+        $this->email->from('maxday4nd@gmail.com', 'Dinas Kab.bondowoso');
         $this->email->to($this->input->post('email'));
 
         if ($type == 'verify') {

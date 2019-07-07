@@ -18,6 +18,21 @@
                                 <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Email Address" value="<?= set_value('email'); ?>">
                                 <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                             </div>
+                            <div class=" form-group row">
+                                <div class="col-sm-6">
+                                    <label> Pilih bagian :</label>
+                                </div>
+
+                                <div class=" col-sm-6">
+                                    <select class="custom-select" id="role_id" name="role_id">
+                                        <option selected> Choose </option>
+                                        <option value="2"> Super User </option>
+                                        <option value="3"> Admin </option>
+                                    </select>
+                                </div>
+                            </div>
+
+
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="password" class="form-control form-control-user" id="password1" name="password1" placeholder="Password">

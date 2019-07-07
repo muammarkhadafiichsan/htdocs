@@ -11,18 +11,18 @@
 			</div>
 			<div class="card-body">
 
-				<form action="<?php base_url('product/add') ?>" method="post" enctype="multipart/form-data">
+				<form action="<?php base_url('Product/tambah_data') ?>" method="post" enctype="multipart/form-data">
 					<div class="form-group">
-						<label for="name">Name*</label>
-						<input class="form-control" type="text" name="name" placeholder="Product name" />
+						<label for="name">name*</label>
+						<input class="form-control" type="text" id=" name" name="name" placeholder="Product name" />
 						<div class="invalid-feedback">
 
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label for="name">Description*</label>
-						<textarea class="form-control " name="description" placeholder="Product description..."></textarea>
+						<label for="name">description*</label>
+						<textarea class="form-control " id=" description" name="description" placeholder="Product description..."></textarea>
 						<div class="invalid-feedback">
 							<?php echo form_error('description') ?>
 						</div>

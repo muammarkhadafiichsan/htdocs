@@ -8,19 +8,19 @@ class Products extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-        $this->load->model("product_model");
+        $this->load->model("Product_model");
         $this->load->library('form_validation');
     }
 
     public function index()
     {
-        $data["products"] = $this->product_model->getAll();
+        $data["products"] = $this->Product_model->getAll();
         $this->load->view("product/list", $data);
     }
 
     public function add()
     {
-        $product = $this->product_model;
+        $product = $this->Product_model;
         $validation = $this->form_validation;
         $validation->set_rules($product->rules());
 
@@ -30,11 +30,12 @@ class Products extends CI_Controller
         }
 
         $this->load->view("user/new_form");
+        redirect('Product');
     }
 
     public function sms()
     {
-        $product = $this->product_model;
+        $product = $this->Product_model;
         $validation = $this->form_validation;
         $validation->set_rules($product->rules());
 
@@ -50,7 +51,7 @@ class Products extends CI_Controller
     {
         if (!isset($id)) redirect('products');
 
-        $product = $this->product_model;
+        $product = $this->Product_model;
         $validation = $this->form_validation;
         $validation->set_rules($product->rules());
 
@@ -70,7 +71,21 @@ class Products extends CI_Controller
         if (!isset($id)) show_404();
 
         if ($this->product_model->delete($id)) {
-            redirect(site_url('products'));
+            redirect(site_url('user'));
         }
+    }
+
+    public function tambah_data()
+    {
+        $data = [
+            'name' => $this->input->post('name'),
+            'description' => $this->input->post('description')
+        ];
+
+        $this->Product_model->tambah_data($data);
+        $this->session->set_flashdata('tambah', '<div class"alert alert-succes" role="alert">
+        BERHASIL DITAMBAHKAN </div>');
+
+        redirect('Product');
     }
 }

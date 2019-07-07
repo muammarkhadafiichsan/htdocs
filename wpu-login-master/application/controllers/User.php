@@ -8,7 +8,7 @@ class User extends CI_Controller
         parent::__construct();
         is_logged_in();
 
-        $this->load->model("product_model");
+        $this->load->model("Product_model");
         $this->load->library('form_validation');
     }
 
@@ -124,6 +124,19 @@ class User extends CI_Controller
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
         $this->load->view('user/new_form', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function list()
+    {
+
+        $data['title'] = 'List Artikel';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/list', $data);
         $this->load->view('templates/footer');
     }
 }

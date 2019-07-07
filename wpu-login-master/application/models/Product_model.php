@@ -14,13 +14,13 @@ class Product_model extends CI_Model
         return [
             [
                 'field' => 'name',
-                'label' => 'Name',
+                'label' => 'name',
                 'rules' => 'required'
             ],
 
             [
                 'field' => 'description',
-                'label' => 'Description',
+                'label' => 'description',
                 'rules' => 'required'
             ]
         ];

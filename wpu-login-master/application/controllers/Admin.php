@@ -75,4 +75,16 @@ class Admin extends CI_Controller
 
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Access Changed!</div>');
     }
+    public function list()
+    {
+
+        $data['title'] = 'List Artikel';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/list', $data);
+        $this->load->view('templates/footer');
+    }
 }
