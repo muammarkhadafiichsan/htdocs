@@ -1,5 +1,6 @@
 package com.example.dinaspeternakan.Rest;
 
+import com.example.dinaspeternakan.Model.GetAnggota;
 import com.example.dinaspeternakan.Model.GetArtikel;
 
 import retrofit2.Call;
@@ -9,5 +10,8 @@ public interface ApiInterface {
 
     @GET("Artikel1")
     Call<GetArtikel> getArtikel();
+
+	@GET("Anggota")
+	Call<GetAnggota> getAnggota();
 
 }

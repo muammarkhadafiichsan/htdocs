@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-public class DetailArtikel extends AppCompatActivity implements View.OnClickListener {
+public class DetailAnggota extends AppCompatActivity implements View.OnClickListener {
 
 	TextView name;
 	ImageView image;
@@ -18,7 +18,7 @@ public class DetailArtikel extends AppCompatActivity implements View.OnClickList
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_detail_artikel);
+		setContentView(R.layout.fragment_lab_bondowoso);
 
 		name = findViewById(R.id.tvdeskripsi);
 

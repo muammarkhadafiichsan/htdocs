@@ -8,9 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.dinaspeternakan.DetailArtikel;
 import com.example.dinaspeternakan.Model.Artikel;
 import com.example.dinaspeternakan.R;
-import com.example.dinaspeternakan.SatuFragment;
 
 import java.util.List;
 
@@ -21,8 +21,8 @@ import java.util.List;
 public class ArtikelAdapter extends RecyclerView.Adapter<ArtikelAdapter.MyViewHolder>{
 	List<Artikel> mArtikelList;
 
-	public ArtikelAdapter(List <Artikel> KontakList) {
-		mArtikelList = KontakList;
+	public ArtikelAdapter(List <Artikel> ArtikelList) {
+		mArtikelList = ArtikelList;
 	}
 
 	@Override
@@ -34,13 +34,16 @@ public class ArtikelAdapter extends RecyclerView.Adapter<ArtikelAdapter.MyViewHo
 
 	@Override
 	public void onBindViewHolder (MyViewHolder holder,final int position){
-		holder.mTextViewName.setText("Nama = " + mArtikelList.get(position).getNama());
-
+//		holder.mTextViewName.setText(mArtikelList.get(position).getProduct_id());
+		holder.mTextViewName.setText(mArtikelList.get(position).getName());
 		holder.itemView.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent mIntent = new Intent(view.getContext(), SatuFragment.class);
-				mIntent.putExtra("Nama", mArtikelList.get(position).getNama());
+				Intent mIntent = new Intent(view.getContext(), DetailArtikel.class);
+				mIntent.putExtra("id", mArtikelList.get(position).getProduct_id());
+				mIntent.putExtra("judul", mArtikelList.get(position).getName());
+				mIntent.putExtra("image", mArtikelList.get(position).getImage());
+				mIntent.putExtra("deskripsi", mArtikelList.get(position).getDescription());
 				view.getContext().startActivity(mIntent);
 			}
 		});
@@ -52,11 +55,12 @@ public class ArtikelAdapter extends RecyclerView.Adapter<ArtikelAdapter.MyViewHo
 	}
 
 	public class MyViewHolder extends RecyclerView.ViewHolder {
-		public TextView  mTextViewName;
+		public TextView  mTextViewName	;
 
 		public MyViewHolder(View itemView) {
 			super(itemView);
 			mTextViewName = (TextView) itemView.findViewById(R.id.tvJudul);
+
 
 		}
 	}
