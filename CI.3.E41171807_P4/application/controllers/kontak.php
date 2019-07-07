@@ -32,7 +32,10 @@ class Kontak extends REST_Controller {
         $data = array(
                     'id'           => $this->post('id'),
                     'nama'          => $this->post('nama'),
-                    'nomor'    => $this->post('nomor'));
+                    'nomor'    => $this->post('nomor'),
+                    'provider'=> $this->post('Provider'),
+                    'harga' => $this->post('Harga'));
+
         $insert = $this->db->insert('telepon', $data);
         if ($insert) {
             $this->response($data, 200);
@@ -48,7 +51,10 @@ class Kontak extends REST_Controller {
         $data = array(
                     'id'       => $this->put('id'),
                     'nama'          => $this->put('nama'),
-                    'nomor'    => $this->put('nomor'));
+                    'nomor'    => $this->put('nomor'),
+                    'provider'=> $this->put('provider'),
+                    'harga' => $this->put('harga'));
+
         $this->db->where('id', $id);
         $update = $this->db->update('telepon', $data);
         if ($update) {
