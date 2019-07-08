@@ -120,7 +120,7 @@ class User extends CI_Controller
     public function input()
     {
 
-        $data['title'] = 'INPUT ARTIKEL';
+        $data['title'] = 'Input Artikel';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
 
@@ -131,29 +131,52 @@ class User extends CI_Controller
         $this->load->view('templates/footer');
     }
 
+    public function tambah_artikel()
+    {
+        $data = [
+
+            'product_id' => $this->input->post('product_id'),
+            'name' => $this->input->post('name'),
+            'image' => $this->_uploadImage(),
+            'description' => $this->input->post('description'),
+        ];
+
+        $this->Product_model->tambah_data($data);
+        $this->session->set_flashdata('pesantambah', '<div class="alert alert-success" role="alert">
+                Pesanan ditambahkan
+              </div>');
+        redirect('user/input');
+    }
+    private function _uploadImage()
+    {
+        $config['upload_path']          = './assets/img/profile';
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['file_name']            = $_FILES['image']['name'];
+        $config['overwrite']            = true;
+        $config['max_size']             = 1024; // 1MB
+        // $config['max_width']            = 1024;
+        // $config['max_height']           = 768;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('image')) {
+            return $this->upload->data("file_name");
+        }
+
+        return "default.jpg";
+    }
     public function list()
     {
 
-        $data['title'] = 'List Artikel';
+        $data['title'] = 'List';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['list'] = $this->Product_model->list()->result();
+
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
         $this->load->view('product/list', $data);
-        $this->load->view('templates/footer');
-    }
-
-    public function anggota()
-    {
-
-        $data['title'] = 'Input Anggota';
-        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
-        $this->load->view('templates/topbar', $data);
-        $this->load->view('user/new_form_anggota', $data);
         $this->load->view('templates/footer');
     }
 }
