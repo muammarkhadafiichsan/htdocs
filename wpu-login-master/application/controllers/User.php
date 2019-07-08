@@ -14,6 +14,8 @@ class User extends CI_Controller
 
     public function index()
     {
+
+
         $data['title'] = 'My Profile';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
@@ -117,13 +119,15 @@ class User extends CI_Controller
     }
     public function input()
     {
-        $data['title'] = 'Input Artikel';
+
+        $data['title'] = 'INPUT ARTIKEL';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('user/new_form', $data);
+        $this->load->view('product/new_form', $data);
         $this->load->view('templates/footer');
     }
 
@@ -136,7 +140,7 @@ class User extends CI_Controller
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('user/list', $data);
+        $this->load->view('product/list', $data);
         $this->load->view('templates/footer');
     }
 }

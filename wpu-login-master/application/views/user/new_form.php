@@ -11,10 +11,10 @@
 			</div>
 			<div class="card-body">
 
-				<form action="<?php base_url('Product/tambah_data') ?>" method="post" enctype="multipart/form-data">
+				<form action="<?php base_url('user/input') ?>" method="post" enctype="multipart/form-data">
 					<div class="form-group">
 						<label for="name">name*</label>
-						<input class="form-control" type="text" id=" name" name="name" placeholder="Product name" />
+						<input class="form-control" type="text" id=" name" name="name" placeholder="nama artikel" />
 						<div class="invalid-feedback">
 
 						</div>

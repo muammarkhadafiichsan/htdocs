@@ -5,7 +5,7 @@
 	<!-- DataTables -->
 	<div class="card mb-3">
 		<div class="card-header">
-			<a href="<?php echo site_url('products/add') ?>"><i class="fas fa-plus"></i> Add New</a>
+			<a href="<?php echo site_url('product/add') ?>"><i class="fas fa-plus"></i> Add New</a>
 		</div>
 		<div class="card-body">
 
