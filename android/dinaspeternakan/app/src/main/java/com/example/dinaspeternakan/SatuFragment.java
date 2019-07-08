@@ -50,13 +50,13 @@ public class SatuFragment extends Fragment {
 	}
 
 	public void refresh() {
-		Call<GetArtikel> kontakCall = mApiInterface.getArtikel();
-		kontakCall.enqueue(new Callback<GetArtikel>() {
+		Call<GetArtikel> ArtikelCall = mApiInterface.getArtikel();
+		ArtikelCall.enqueue(new Callback<GetArtikel>() {
 			@Override
 			public void onResponse(Call<GetArtikel> call, Response<GetArtikel>
 					response) {
 				List<Artikel> ArtikelList = response.body().getListDataArtikel();
-				Log.d("Retrofit Get", "Jumlah : " +String.valueOf(ArtikelList.size()));
+				Log.d("Retrofit Get", "Jumlah : " +String.valueOf (ArtikelList.size()));
 				mAdapter = new ArtikelAdapter(ArtikelList);
 				mRecyclerView.setAdapter(mAdapter);
 			}

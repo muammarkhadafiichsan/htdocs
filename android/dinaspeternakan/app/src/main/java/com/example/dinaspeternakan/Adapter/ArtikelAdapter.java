@@ -18,36 +18,43 @@ import java.util.List;
  * Created by root on 2/3/17.
  */
 
-public class ArtikelAdapter extends RecyclerView.Adapter<ArtikelAdapter.MyViewHolder>{
+public class ArtikelAdapter extends RecyclerView.Adapter<ArtikelAdapter.MyViewHolder> {
 	List<Artikel> mArtikelList;
 
-	public ArtikelAdapter(List <Artikel> ArtikelList) {
+	public ArtikelAdapter(List<Artikel> ArtikelList) {
 		mArtikelList = ArtikelList;
 	}
 
 	@Override
-	public MyViewHolder onCreateViewHolder (ViewGroup parent,int viewType){
+	public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 		View mView = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_satu, parent, false);
 		MyViewHolder mViewHolder = new MyViewHolder(mView);
 		return mViewHolder;
 	}
 
 	@Override
-	public void onBindViewHolder (MyViewHolder holder,final int position){
-//		holder.mTextViewName.setText(mArtikelList.get(position).getProduct_id());
-		holder.mTextViewName.setText(mArtikelList.get(position).getName());
+	public void onBindViewHolder(MyViewHolder holder, final int position) {
+		//holder.mTextViewId.setText("Id = " + mItemList.get(position).getId_item());
+		holder.mTextViewNama.setText(mArtikelList.get(position).getName());
+
+
 		holder.itemView.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
 				Intent mIntent = new Intent(view.getContext(), DetailArtikel.class);
 				mIntent.putExtra("id", mArtikelList.get(position).getProduct_id());
-				mIntent.putExtra("judul", mArtikelList.get(position).getName());
+				mIntent.putExtra("name", mArtikelList.get(position).getName());
 				mIntent.putExtra("image", mArtikelList.get(position).getImage());
 				mIntent.putExtra("deskripsi", mArtikelList.get(position).getDescription());
+
+
+
 				view.getContext().startActivity(mIntent);
 			}
 		});
+
 	}
+
 
 	@Override
 	public int getItemCount () {
@@ -55,11 +62,11 @@ public class ArtikelAdapter extends RecyclerView.Adapter<ArtikelAdapter.MyViewHo
 	}
 
 	public class MyViewHolder extends RecyclerView.ViewHolder {
-		public TextView  mTextViewName	;
+		public TextView  mTextViewNama	;
 
 		public MyViewHolder(View itemView) {
 			super(itemView);
-			mTextViewName = (TextView) itemView.findViewById(R.id.tvJudul);
+			mTextViewNama = (TextView) itemView.findViewById(R.id.tvJudul);
 
 
 		}
