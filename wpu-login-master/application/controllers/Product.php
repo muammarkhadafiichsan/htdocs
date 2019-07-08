@@ -33,19 +33,7 @@ class Products extends CI_Controller
         redirect('Product');
     }
 
-    public function sms()
-    {
-        $product = $this->Product_model;
-        $validation = $this->form_validation;
-        $validation->set_rules($product->rules());
-
-        if ($validation->run()) {
-            $product->save();
-            $this->session->set_flashdata('success', 'Berhasil disimpan');
-        }
-
-        $this->load->view("user/sms");
-    }
+   
 
     public function edit($id = null)
     {
