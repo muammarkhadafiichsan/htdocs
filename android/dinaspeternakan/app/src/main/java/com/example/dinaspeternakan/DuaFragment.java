@@ -36,8 +36,6 @@ public class DuaFragment extends Fragment implements View.OnClickListener {
         kunjunganternak = (LinearLayout) view.findViewById(R.id.kunjunganternak);
         kunjunganternak.setOnClickListener(this);
 
-        jualbeli = (CardView) view.findViewById(R.id.lab);
-        jualbeli.setOnClickListener(this);
 
 
         return  view;

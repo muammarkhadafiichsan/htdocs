@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         tabAdapter = new TabAdapter(getSupportFragmentManager());
         tabAdapter.addFragment(new SatuFragment(), "Tab 1");
         tabAdapter.addFragment(new DuaFragment(), "Tab 2");
-        tabAdapter.addFragment(new TigaFragment(), "Tab 3");
+		tabAdapter.addFragment(new TigaFragment(), "Tab 3");
         tabAdapter.addFragment(new EmpatFragment(), "Tab 4");
         tabAdapter.addFragment(new LimaFragment(), "Tab 5");
 
@@ -50,8 +50,9 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(0).setIcon(tabIcon[0]);
         tabLayout.getTabAt(1).setIcon(tabIcon[1]);
         tabLayout.getTabAt(2).setIcon(tabIcon[2]);
-        tabLayout.getTabAt(3).setIcon(tabIcon[3]);
+		tabLayout.getTabAt(3).setIcon(tabIcon[3]);
         tabLayout.getTabAt(4).setIcon(tabIcon[4]);
+
 
 
         ColorStateList colors;

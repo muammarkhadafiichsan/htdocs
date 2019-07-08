@@ -32,6 +32,7 @@ class Products extends CI_Controller
         $this->load->view("product/new_form");
     }
 
+
     public function sms()
     {
         $product = $this->product_model;
@@ -45,6 +46,7 @@ class Products extends CI_Controller
 
         $this->load->view("product/sms");
     }
+
 
     public function edit($id = null)
     {

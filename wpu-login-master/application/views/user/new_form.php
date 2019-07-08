@@ -11,34 +11,39 @@
 			</div>
 			<div class="card-body">
 
-				<form action="<?php base_url('user/input') ?>" method="post" enctype="multipart/form-data">
-					<div class="form-group">
-						<label for="name">name*</label>
-						<input class="form-control" type="text" id=" name" name="name" placeholder="nama artikel" />
-						<div class="invalid-feedback">
 
-						</div>
+
+
+
+
+				<div class="form-group">
+					<label for="name">name*</label>
+					<input class="form-control" type="text" id=" name" name="name" placeholder="nama artikel" />
+					<div class="invalid-feedback">
+						<?php echo form_error('name') ?>
+
 					</div>
+				</div>
 
-					<div class="form-group">
-						<label for="name">description*</label>
-						<textarea class="form-control " id=" description" name="description" placeholder="Product description..."></textarea>
-						<div class="invalid-feedback">
-							<?php echo form_error('description') ?>
-						</div>
+				<div class="form-group">
+					<label for="name">description*</label>
+					<textarea class="form-control " id="description" name="description" placeholder="Product description..."></textarea>
+					<div class="invalid-feedback">
+						<?php echo form_error('description') ?>
 					</div>
+				</div>
 
-					<div class="form-group">
-						<label for="name">Photo</label>
-						<input class="form-control-file " type="file" name="image" />
-						<div class="invalid-feedback">
-							<?php echo form_error('image') ?>
-						</div>
+				<div class="form-group">
+					<label for="name">Photo</label>
+					<input class="form-control-file " type="file" name="image" />
+					<div class="invalid-feedback">
+						<?php echo form_error('image') ?>
 					</div>
+				</div>
 
 
 
-					<input class="btn btn-success" type="submit" name="btn" value="Save" />
+				<input class="btn btn-success" type="submit" name="btn" value="Save" />
 				</form>
 
 			</div>

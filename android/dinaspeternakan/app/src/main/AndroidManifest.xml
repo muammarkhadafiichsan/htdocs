@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	package="com.example.dinaspeternakan">
+<uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -13,7 +14,6 @@
 		<activity android:name=".SatuFragment"/>
 		<activity android:name=".DetailArtikel"/>
 		<activity android:name=".DetailForumUnggas"/>
-		<activity android:name=".DetailGaleri"/>
 		<activity android:name=".ForumBisnis"/>
 		<activity android:name=".ForumUnggas"/>
 		<activity android:name=".KunjunganTernak"/>
