@@ -17,8 +17,8 @@
 						<input class="form-control" type="text" id=" name" name="name" placeholder="Product name" />
 						<div class="invalid-feedback">
 
-						</div>
 					</div>
+				</div>
 
 					<div class="form-group">
 						<label for="name">description*</label>
@@ -27,18 +27,19 @@
 							<?php echo form_error('description') ?>
 						</div>
 					</div>
+				</div>
 
-					<div class="form-group">
-						<label for="name">Photo</label>
-						<input class="form-control-file " type="file" name="image" />
-						<div class="invalid-feedback">
-							<?php echo form_error('image') ?>
-						</div>
+				<div class="form-group">
+					<label for="name">Photo</label>
+					<input class="form-control-file " type="file" name="image" />
+					<div class="invalid-feedback">
+						<?php echo form_error('image') ?>
 					</div>
+				</div>
 
 
 
-					<input class="btn btn-success" type="submit" name="btn" value="Save" />
+				<input class="btn btn-success" type="submit" name="btn" value="Save" />
 				</form>
 
 			</div>
