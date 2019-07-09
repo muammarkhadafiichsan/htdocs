@@ -178,5 +178,5 @@ class User extends CI_Controller
         $this->load->view('templates/topbar', $data);
         $this->load->view('product/list', $data);
         $this->load->view('templates/footer');
-    }
+    } 
 }
