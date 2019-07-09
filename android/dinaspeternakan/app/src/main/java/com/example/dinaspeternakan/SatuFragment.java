@@ -57,7 +57,7 @@ public class SatuFragment extends Fragment {
 					response) {
 				List<Artikel> ArtikelList = response.body().getListDataArtikel();
 				Log.d("Retrofit Get", "Jumlah : " +String.valueOf (ArtikelList.size()));
-				mAdapter = new ArtikelAdapter(ArtikelList);
+				mAdapter = new ArtikelAdapter(ArtikelList,getContext());
 				mRecyclerView.setAdapter(mAdapter);
 			}
 

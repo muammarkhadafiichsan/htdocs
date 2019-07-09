@@ -39,6 +39,17 @@
 		<!--android:textStyle="bold" />-->
 
 		<TextView
+			android:id="@+id/tvJudul"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left"
+			android:hint="Judul"
+			android:textAlignment="center"
+			android:textSize="16sp"
+			android:textStyle="bold"
+			android:layout_margin="5dp"/>
+
+		<TextView
 			android:id="@+id/tvdeskripsi"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"

@@ -1,9 +1,10 @@
 
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-class M_logintest extends CI_Model
+ class M_login extends CI_Model
 {
     function __construct()
     {
+        $this->load->database();
         parent::__construct();
     }
     function cek_login($email, $password)
