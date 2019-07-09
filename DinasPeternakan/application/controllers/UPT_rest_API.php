@@ -27,8 +27,9 @@ class Artikel1 extends REST_Controller
     function index_post()
     {
         $data = array(
-            'id_puskeswan'           => $this->post('id_puskeswan'),
-            'nama_kepala'          => $this->post('nama_kepala'),
+            'id_puskeswan' => $this->post('id_puskeswan'),
+            'nama_kepala' => $this->post('nama_kepala'),
+            'TTL' => $this->input->post('TTL'),
             'nomor'    => $this->post('nomor')
         );
         $insert = $this->db->insert('anggota', $data);
