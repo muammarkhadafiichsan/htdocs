@@ -18,8 +18,8 @@ class Artikel1 extends REST_Controller
     //Menampilkan data Artikel
     function index_get()
     {
-        $Artikel = $this->db->get('products')->result();
-        $this->response(array("result" => $Artikel, 200));
+        $UPT_rest_API = $this->db->get('anggota_puskeswan')->result();
+        $this->response(array("result" => $UPT_rest_API, 200));
     }
 
     //Masukan function selanjutnya disini
@@ -27,11 +27,11 @@ class Artikel1 extends REST_Controller
     function index_post()
     {
         $data = array(
-            'id'           => $this->post('id'),
-            'nama'          => $this->post('nama'),
+            'id_puskeswan'           => $this->post('id_puskeswan'),
+            'nama_kepala'          => $this->post('nama_kepala'),
             'nomor'    => $this->post('nomor')
         );
-        $insert = $this->db->insert('telepon', $data);
+        $insert = $this->db->insert('anggota', $data);
         if ($insert) {
             $this->response($data, 200);
         } else {
@@ -43,14 +43,14 @@ class Artikel1 extends REST_Controller
     //Memperbarui data kontak yang telah ada
     function index_put()
     {
-        $id = $this->put('id');
+        $id = $this->put('id_puskeswan');
         $data = array(
-            'id'       => $this->put('id'),
-            'nama'          => $this->put('nama'),
+            'id_puskeswan'  => $this->put('id_puskeswan'),
+            'nama_kepala'  => $this->put('nama_kepala'),
             'nomor'    => $this->put('nomor')
         );
-        $this->db->where('id', $id);
-        $update = $this->db->update('telepon', $data);
+        $this->db->where('id_puskeswan', $id);
+        $update = $this->db->update('anggota_puskeswan', $data);
         if ($update) {
             $this->response($data, 200);
         } else {
@@ -62,9 +62,9 @@ class Artikel1 extends REST_Controller
     //Menghapus salah satu data kontak
     function index_delete()
     {
-        $id = $this->delete('id');
-        $this->db->where('id', $id);
-        $delete = $this->db->delete('telepon');
+        $id = $this->delete('id_puskeswan');
+        $this->db->where('id_puskeswan', $id);
+        $delete = $this->db->delete('anggota_puskeswan');
         if ($delete) {
             $this->response(array('status' => 'success'), 201);
         } else {

@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
 
-class Product_model extends CI_Model
+class Anggota_model extends CI_Model
 {
     private $_table = "anggota_puskeswan";
 
@@ -15,7 +15,7 @@ class Product_model extends CI_Model
         return [
             [
                 'field' => 'nama_kepala',
-                'label' => 'Nama_kepala',
+                'label' => 'nama_kepala',
                 'rules' => 'required'
             ],
 
@@ -27,7 +27,7 @@ class Product_model extends CI_Model
 
             [
                 'field' => 'deskripsi',
-                'label' => 'Deskripsi',
+                'label' => 'deskripsi',
                 'rules' => 'required'
             ]
         ];
@@ -90,5 +90,14 @@ class Product_model extends CI_Model
         }
 
         return "default.jpg";
+    }
+
+    function inputan($data)
+    {
+        $this->db->insert('anggota_puskeswan', $data);
+    }
+    function list_lab()
+    {
+        return  $this->db->get('anggota_puskeswan');
     }
 }

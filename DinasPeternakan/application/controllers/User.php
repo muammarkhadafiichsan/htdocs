@@ -9,6 +9,7 @@ class User extends CI_Controller
         is_logged_in();
 
         $this->load->model("Product_model");
+        $this->load->model("Anggota_model");
         $this->load->library('form_validation');
     }
 
@@ -230,5 +231,52 @@ class User extends CI_Controller
                   </div>');
             redirect('user');
         }
+    }
+    public function input_lab()
+    {
+
+        $data['title'] = 'UPT dan lab';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/new_form_anggota', $data);
+        $this->load->view('templates/footer');
+    }
+
+
+
+    public function inputan()
+    {
+        $data = [
+
+            'id_puskeswan' => $this->input->post('id_puskeswan'),
+            'nama_kepala' => $this->input->post('nama_kepala'),
+            'TTL' => $this->input->post('TTL'),
+            'image' => $this->_uploadImage(),
+            'deskripsi' => $this->input->post('deskripsi'),
+        ];
+
+        $this->Anggota_model->inputan($data);
+        $this->session->set_flashdata('pesantambah', '<div class="alert alert-success" role="alert">
+                Pesanan ditambahkan
+              </div>');
+        redirect('user/input_lab');
+    }
+    public function list_lab()
+    {
+
+        $data['title'] = 'List_lab';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['list_lab'] = $this->Anggota_model->list_lab()->result();
+
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/list_anggota', $data);
+        $this->load->view('templates/footer');
     }
 }

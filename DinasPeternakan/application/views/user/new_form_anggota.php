@@ -1,76 +1,63 @@
-<div id="content-wrapper">
+<?php if ($this->session->flashdata('success')) : ?>
+    <div class="alert alert-success" role="alert">
+        <?php echo $this->session->flashdata('success'); ?>
+    </div>
+<?php endif; ?>
 
-    <div class="container-fluid">
+<div class="card mb-3">
+    <div class="card-header">
+        <a href="<?php echo site_url('user/list_lab'); ?>"><i class="fas fa-arrow-left"></i> List</a>
+    </div>
 
+    <div class="card-body">
 
+        <?php echo form_open_multipart('user/inputan'); ?>
 
-
-        <div class="card mb-3">
-            <div class="card-header">
-                <a href=""><i class="fas fa-arrow-left"></i> Back</a>
+        <div class="form-group">
+            <label for="name">nama_kepala*</label>
+            <input class="form-control" type="text" id="nama_kepala" name="nama_kepala" placeholder=" nama ketua lab" />
+            <div class="invalid-feedback">
+                <?php echo form_error('nama') ?>
             </div>
-            <div class="card-body">
-
-                <form action="<?php base_url('product/add') ?>" method="post" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="name">Nama Kepala*</label>
-                        <input class="form-control" type="text" name="name" placeholder="Product name" />
-                        <div class="invalid-feedback">
-
-                        </div>
-                    </div>
-                    <div class="form-group">
-                                    <label for="TTL">Tempat/Tanggal Lahir</label>
-                                    <input class="form-control" type="text" name="TTL" id="TTL" placeholder="TTL" />
-                                    <div class="invalid-feedback">
-                                        <?php echo form_error('TTL') ?>
-                                    </div>
-                                </div>
-                    <div class="form-group">
-                        <label for="name">Deskripsi*</label>
-                        <textarea class="form-control " name="description" placeholder="Product description..."></textarea>
-                        <div class="invalid-feedback">
-                            <?php echo form_error('description') ?>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name">Photo</label>
-                        <input class="form-control-file " type="file" name="image" />
-                        <div class="invalid-feedback">
-                            <?php echo form_error('image') ?>
-                        </div>
-                    </div>
-
-
-
-                    <input class="btn btn-success" type="submit" name="btn" value="Save" />
-                </form>
-
-            </div>
-
-            <div class="card-footer small text-muted">
-                * required fields
-            </div>
-
-
         </div>
-        <!-- /.container-fluid -->
 
-        <!-- Sticky Footer -->
+        <div class="form-group">
+            <label for="name">TTL*</label>
+            <textarea class="form-control" id="TTL" name="TTL" placeholder="Tempat-Tanggal-Lahir"></textarea>
+            <div class="invalid-feedback">
+                <?php echo form_error('TTL') ?>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name">deskripsi*</label>
+            <textarea class="form-control" id="deskripsi" name="deskripsi" placeholder="deskripsi"></textarea>
+            <div class="invalid-feedback">
+                <?php echo form_error('deskripsi') ?>
+            </div>
+        </div>
 
+        <div class="form-group">
+            <label for="name">Photo</label>
+            <input class="form-control-file <?php echo form_error('name') ? 'is-invalid' : '' ?>" type="file" name="image" />
+            <div class="invalid-feedback">
+                <?php echo form_error('image') ?>
+            </div>
+        </div>
+
+
+
+        <button class="btn btn-success" type="submit">SAVE</button>
+
+
+        <?php echo form_close(); ?>
 
     </div>
-    <!-- /.content-wrapper -->
 
-</div>
-<!-- /#wrapper -->
+    <div class="card-footer small text-muted">
+        * required fields
+    </div>
 
 
-<?php $this->load->view("templates/scrolltop.php") ?>
+    </body>
 
-<?php $this->load->view("templates/js.php") ?>
-
-</body>
-
-</html>
+    </html>
