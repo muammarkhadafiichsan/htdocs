@@ -6,7 +6,7 @@ require APPPATH . '/libraries/REST_Controller.php';
 
 use Restserver\Libraries\REST_Controller;
 
-class UPT_rest_API extends REST_Controller
+class Forum_bisnis_API extends REST_Controller
 {
 
     function __construct($config = 'rest')
@@ -18,7 +18,7 @@ class UPT_rest_API extends REST_Controller
     //Menampilkan data Artikel
     function index_get()
     {
-        $UPT_rest_API = $this->db->get('anggota_puskeswan')->result();
+        $UPT_rest_API = $this->db->get('forum_bisnis')->result();
         $this->response(array("result" => $UPT_rest_API, 200));
     }
 
@@ -27,12 +27,12 @@ class UPT_rest_API extends REST_Controller
     function index_post()
     {
         $data = array(
-            'id_puskeswan' => $this->post('id_puskeswan'),
-            'nama_kepala' => $this->post('nama_kepala'),
-            'TTL' => $this->input->post('TTL'),
-            'nomor'    => $this->post('nomor')
+            'id' => $this->post('id'),
+            'judul_bisnis' => $this->post('judul_bisnis'),
+            'image' => $this->input->post('image'),
+            'deskripsi'    => $this->post('deskripsi')
         );
-        $insert = $this->db->insert('anggota', $data);
+        $insert = $this->db->insert('forum_bisnis', $data);
         if ($insert) {
             $this->response($data, 200);
         } else {
