@@ -29,7 +29,6 @@ public class DetailArtikel extends AppCompatActivity implements View.OnClickList
 		Intent mIntent = getIntent();
 		name.setText(mIntent.getStringExtra("nama"));
 		deskripsi.setText(mIntent.getStringExtra("deskripsi"));
-
 		Picasso.with(DetailArtikel.this).load("http://192.168.43.174/DinasPeternakan/assets/img/profile/"+mIntent.getStringExtra ("image")).into(image);
 
 

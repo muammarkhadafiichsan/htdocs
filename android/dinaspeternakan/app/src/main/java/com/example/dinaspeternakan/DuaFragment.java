@@ -28,7 +28,7 @@ public class DuaFragment extends Fragment {
 	private RecyclerView mRecyclerView;
 	private RecyclerView.Adapter mAdapter;
 	private RecyclerView.LayoutManager mLayoutManager;
-	public static SatuFragment ma;
+	public static DuaFragment ma;
 	public DuaFragment() {
 		// Required empty public constructor
 	}
@@ -53,16 +53,16 @@ public class DuaFragment extends Fragment {
 		Call<GetBisnis> UptCall = mApiInterface.getBisnis();
 		UptCall.enqueue(new Callback<GetBisnis>() {
 			@Override
-			public void onResponse(Call<GetUpt> call, Response<GetUpt>
+			public void onResponse(Call<GetBisnis> call, Response<GetBisnis>
 					response) {
-				List<Upt> UptList = response.body().getListDataUpt();
-				Log.d("Retrofit Get", "Jumlah : " +String.valueOf (UptList.size()));
-				mAdapter = new UptAdapter(UptList,getContext());
+				List<Bisnis> BisnisList = response.body().getListDataBisnis();
+				Log.d("Retrofit Get", "Jumlah : " +String.valueOf (BisnisList.size()));
+				mAdapter = new BisnisAdapter(BisnisList,getContext());
 				mRecyclerView.setAdapter(mAdapter);
 			}
 
 			@Override
-			public void onFailure(Call<GetUpt> call, Throwable t) {
+			public void onFailure(Call<GetBisnis> call, Throwable t) {
 				Log.e("Retrofit Get", t.toString());
 			}
 		});

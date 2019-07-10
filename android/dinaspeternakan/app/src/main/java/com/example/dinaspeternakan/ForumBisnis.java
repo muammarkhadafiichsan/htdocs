@@ -12,25 +12,31 @@ import com.squareup.picasso.Picasso;
 
 public class ForumBisnis extends AppCompatActivity implements View.OnClickListener {
 
-	TextView name;
-	TextView deskripsi;
+	TextView judul_bisnis, alamat, no_telephon, nama_peternak, diskripsi ;
 	ImageView image;
 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_detail_artikel);
+		setContentView(R.layout.activity_forum_bisnis);
 
-		name = findViewById(R.id.tvJudul);
-		deskripsi = findViewById(R.id.tvdeskripsi);
+		judul_bisnis = findViewById(R.id.tvJudul);
+		alamat = findViewById(R.id.tvalamat);
+		no_telephon = findViewById(R.id.tvnomer);
+		nama_peternak = findViewById(R.id.tvpeternak);
+		diskripsi = findViewById(R.id.tvdeskripsi);
 		image= findViewById(R.id.item);
 
 		Intent mIntent = getIntent();
-		name.setText(mIntent.getStringExtra("nama"));
-		deskripsi.setText(mIntent.getStringExtra("deskripsi"));
+		judul_bisnis.setText(mIntent.getStringExtra("judul_bisnis"));
+		alamat.setText(mIntent.getStringExtra("alamat"));
+		nama_peternak.setText(mIntent.getStringExtra("nama_peternak"));
+		no_telephon.setText(mIntent.getStringExtra("no_telephon"));
+		alamat.setText(mIntent.getStringExtra("alamat"));
+		diskripsi.setText(mIntent.getStringExtra("diskripsi"));
 
-		Picasso.with(DetailArtikel.this).load("http://192.168.43.174/DinasPeternakan/assets/img/profile/"+mIntent.getStringExtra ("image")).into(image);
+		Picasso.with(ForumBisnis.this).load("http://192.168.43.174/DinasPeternakan/assets/img/profile/"+mIntent.getStringExtra ("image")).into(image);
 
 
 	}

@@ -28,7 +28,7 @@ public class TigaFragment extends Fragment {
 	private RecyclerView mRecyclerView;
 	private RecyclerView.Adapter mAdapter;
 	private RecyclerView.LayoutManager mLayoutManager;
-	public static SatuFragment ma;
+	public static TigaFragment ma;
 	public TigaFragment() {
 		// Required empty public constructor
 	}

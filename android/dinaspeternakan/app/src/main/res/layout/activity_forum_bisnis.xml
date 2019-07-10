@@ -50,6 +50,39 @@
 			android:layout_margin="5dp"/>
 
 		<TextView
+			android:id="@+id/tvpeternak"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left"
+			android:hint="nama_peternak"
+			android:textAlignment="center"
+			android:textSize="16sp"
+			android:textStyle="bold"
+			android:layout_margin="5dp"/>
+
+		<TextView
+			android:id="@+id/tvnomer"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left"
+			android:hint="nomer"
+			android:textAlignment="center"
+			android:textSize="16sp"
+			android:textStyle="bold"
+			android:layout_margin="5dp"/>
+
+		<TextView
+			android:id="@+id/tvalamat"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_gravity="left"
+			android:hint="alamat"
+			android:textAlignment="center"
+			android:textSize="16sp"
+			android:textStyle="bold"
+			android:layout_margin="5dp"/>
+
+		<TextView
 			android:id="@+id/tvdeskripsi"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"

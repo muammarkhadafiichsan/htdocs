@@ -79,6 +79,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
 					if (TextUtils.isEmpty(id)) {
 						Toast.makeText(Login.this, "Username atau Password Salah", Toast.LENGTH_SHORT).show();
+						Intent intent= new Intent(Login.this,Login.class);
+						startActivity(intent);
 					}
 					else {
 						Toast.makeText(Login.this, "Berhasil  Login", Toast.LENGTH_SHORT).show();
