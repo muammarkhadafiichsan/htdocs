@@ -27,13 +27,13 @@ class Forum_bisnis_API extends REST_Controller
     function index_post()
     {
         $data = array(
-            'id' => $this->post('id'),
-            'judul_bisnis' => $this->post('judul_bisnis'),
+            'id' => $this->input->post('id'),
+            'judul_bisnis' => $this->input->post('judul_bisnis'),
             'image' => $this->input->post('image'),
             'alamat' => $this->input->post('alamat'),
             'nama_peternak' => $this->input->post('nama_peternak'),
             'no_telephon' => $this->input->post('no_telephon'),
-            'diskripsi'    => $this->post('diskripsi')
+            'diskripsi'    => $this->input->post('diskripsi')
         );
         $insert = $this->db->insert('forum_bisnis', $data);
         if ($insert) {
@@ -47,7 +47,7 @@ class Forum_bisnis_API extends REST_Controller
     //Memperbarui data kontak yang telah ada
     function index_put()
     {
-        $id = $this->put('id_puskeswan');
+        $id = $this->put('id');
         $data = array(
             'id'  => $this->put('id'),
             'judul_bisnis'  => $this->put('judul_bisnis'),

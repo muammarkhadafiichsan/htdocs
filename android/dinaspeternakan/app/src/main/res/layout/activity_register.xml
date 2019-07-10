@@ -47,7 +47,7 @@
 			android:textSize="16dip" />
 
 		<EditText
-			android:id="@+id/nama"
+			android:id="@+id/EdtNama"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center"
@@ -58,7 +58,7 @@
 
 
 		<EditText
-			android:id="@+id/email"
+			android:id="@+id/EdtEmail"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center"
@@ -68,14 +68,25 @@
 			android:singleLine="true" />
 
 		<Spinner
-			android:id="@+id/roleid"
+		android:padding="20dp"
+		android:id="@+id/sp_role_id"
+		android:entries="@array/role_id"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+
+
+		<Spinner
+			android:padding="20dp"
+			android:id="@+id/sp_is_active"
+			android:entries="@array/is_active"
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:entries="@array/role"/>
+			android:layout_height="wrap_content"/>
+
+
 
 
 		<EditText
-			android:id="@+id/txt_password"
+			android:id="@+id/EdtPassword"
 			android:inputType="textPassword"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"

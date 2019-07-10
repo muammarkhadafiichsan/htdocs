@@ -17,9 +17,18 @@
 	<string name="title_placeholder">title_placeholder</string>
 	<string name="subtitle_detail_text">detail_text</string>
 
-	<string-array name="role">
-		<item>2</item>
+	<string name="Artikel">BERITA</string>
+	<string name="Akun">AKUN</string>
+	<string name="Notif">KUNJUNGAN</string>
+	<string name="Layanan">BISNIS</string>
+	<string name="Galeri">UPT</string>
 
+	<string-array name="role_id">
+		<item>2</item>
+	</string-array>
+
+	<string-array name="is_active">
+		<item>1</item>
 	</string-array>
 
 </resources>

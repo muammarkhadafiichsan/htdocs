@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/home_menu"
+        android:title="@string/Artikel"
+        android:icon="@drawable/ic_berita_24dp"/>
+
+    <item
+        android:id="@+id/layanan"
+        android:title="@string/Layanan"
+        android:icon="@drawable/ic_layanan_24dp"/>
+
+    <item
+        android:id="@+id/galeri"
+        android:title="@string/Galeri"
+        android:icon="@drawable/upt"/>
+    <item
+        android:id="@+id/notif_menu"
+        android:title="@string/Notif"
+        android:icon="@drawable/kunjungan"/>
+    <item
+        android:id="@+id/akun_menu"
+        android:title="@string/Akun"
+        android:icon="@drawable/ic_akun_24dp"/>
+
+</menu>

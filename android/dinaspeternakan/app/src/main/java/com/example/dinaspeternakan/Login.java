@@ -27,7 +27,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
 	SharedPreferences sharedPreferences;
 	private Button btn_login;
-	private Button btn_register;
 	private EditText txt_username;
 	private EditText txt_password;
 	ApiInterface mApiInterface;
@@ -105,11 +104,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 				}
 			});
 		}
-		if (v == btn_register) {
-			Intent intent = new Intent(Login.this, Register.class);
-			startActivity(intent);
 
-		}
 		 {
 
 			startActivity(new Intent(Login.this, MainActivity.class)
