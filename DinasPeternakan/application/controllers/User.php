@@ -169,7 +169,7 @@ class User extends CI_Controller
     public function list()
     {
 
-        $data['title'] = 'List';
+        $data['title'] = 'list';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['list'] = $this->Product_model->list()->result();
 
@@ -181,56 +181,55 @@ class User extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function edit_artikel()
+    public function edit_artikel($product_id)
     {
-        $data['title'] = 'Edit Artikel';
+        $data['title'] = 'edit artikel';
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['list'] = $this->db->get_where('products', ['product_id' => $product_id])->row_array();
 
-        $this->form_validation->set_rules('name', 'name', 'required|trim');
+
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/header', $data);
             $this->load->view('templates/sidebar', $data);
             $this->load->view('templates/topbar', $data);
-            $this->load->view('product/edit_artikel', $data);
+            $this->load->view('product/edit_form', $data);
             $this->load->view('templates/footer');
         } else {
+
+            $product_id = $this->input->post('product_id');
             $name = $this->input->post('name');
-            $email = $this->input->post('email');
-
-            $upload_image = $_FILES['image']['name'];
-
-            if ($upload_image) {
-                $config['upload_path']          = './assets/img/profile/';
-                $config['allowed_types']        = 'gif|jpg|png|JPG';
-                $config['max_size']             = '9048';
-
-                $this->load->library('upload', $config);
+            $image = $this->input->post('image');
+            $description = $this->input->post('description');
 
 
-                if ($this->upload->do_upload('image')) {
-                    $old_image = $data['user']['image'];
-                    if ($old_image != 'default.jpg') {
-                        unlink(FCPATH . '/assets/img/profile/' . $old_image);
-                    }
-
-                    $new_image = $this->upload->data('file_name');
-                    $this->db->set('image', $new_image);
-                } else {
-                    echo $this->upload->display_errors();
-                }
-            }
 
 
-            $this->db->set('name', $name);
-            $this->db->where('email', $email);
-            $this->db->update('user');
+
 
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-                    Update Success
-                  </div>');
-            redirect('user');
+            Update Success
+            </div>');
+            redirect('user/list');
         }
+    }
+
+    public function edit_action()
+    {
+        $product_id = $this->input->post('product_id');
+        $name = $this->input->post('name');
+        $image = $this->_uploadImage('image');
+        $description = $this->input->post('description');
+
+        $this->db->set('name', $name);
+        $this->db->set('image', $image);
+        $this->db->set('description', $description);
+        $this->db->where('id_product', $product_id);
+        $this->db->update('products');
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+            Update Success
+            </div>');
+        redirect('user/list');
     }
     public function input_lab()
     {

@@ -75,10 +75,9 @@ class Product_model extends CI_Model
         return  $this->db->get('products');
     }
 
-    function edit_artikel()
+    function edit_artikel($data, $product_id)
     {
-
-
-        return $this->db->get('products');
+        $this->db->where('product_id', $product_id);
+        $this->db->update('products', $data);
     }
 }
