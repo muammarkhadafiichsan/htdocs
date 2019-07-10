@@ -16,31 +16,38 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class InsertForumBisnis extends AppCompatActivity {
-	EditText edtId, edtjudul, edtNama, edtNomor, edtalamat, edtdeskripsi;
-	Button btnupdate;
+	ApiInterface getmApiInterface;
+	EditText judul_bisnis, alamat, no_telephon, nama_peternak, diskripsi ;
+	Button btnsimpan;
 	ApiInterface mApiInterface;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.insert_forum_bisnis);
-		edtId   = (EditText) findViewById(R.id.edtId);
-		edtjudul = (EditText) findViewById(R.id.edtjudul);
-		edtNama = (EditText) findViewById(R.id.edtNama);
-		edtNomor = (EditText) findViewById(R.id.edtNomor);
-		edtalamat = (EditText) findViewById(R.id.edtalamat);
-		edtdeskripsi = (EditText) findViewById(R.id.edtdeskripsi);
-		mApiInterface = ApiClient.getClient().create(ApiInterface.class);
-		btnupdate = (Button) findViewById(R.id.btnupdate);
-		btnupdate.setOnClickListener(new View.OnClickListener() {
+		judul_bisnis = findViewById(R.id.edtjudul);
+		alamat = findViewById(R.id.edtalamat);
+		no_telephon = findViewById(R.id.edtNomor);
+		nama_peternak = findViewById(R.id.edtNama);
+		diskripsi = findViewById(R.id.edtdeskripsi);
+		mApiInterface= ApiClient.getClient().create(ApiInterface.class);
+
+
+
+		btnsimpan = (Button) findViewById(R.id.btnupdate);
+		btnsimpan.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Call<PostPutDelBisnis> postBisnis = mApiInterface.postBisnis(edtId.getText().toString(),(edtNama.getText().toString()),
-						edtNomor.getText().toString(), edtjudul.getText().toString(), edtdeskripsi.getText().toString(), edtalamat.getText().toString());
-				postBisnis.enqueue(new Callback<PostPutDelBisnis>() {
+				Call<PostPutDelBisnis> updateBisnisCall = mApiInterface.postBisnis(
+						judul_bisnis.getText().toString(),
+						alamat.getText().toString(),
+						no_telephon.getText().toString(),
+						nama_peternak.getText().toString(),
+						diskripsi.getText().toString());
+				updateBisnisCall.enqueue(new Callback<PostPutDelBisnis>() {
 					@Override
 					public void onResponse(Call<PostPutDelBisnis> call, Response<PostPutDelBisnis> response) {
-						MainActivity.ma.refresh();
+						//MainActivity.ma.refresh();
 						finish();
 					}
 
@@ -51,8 +58,6 @@ public class InsertForumBisnis extends AppCompatActivity {
 				});
 			}
 		});
-
-
 	}
 
 }

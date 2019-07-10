@@ -88,18 +88,13 @@
 		android:layout_marginBottom="10dp">
 
 		<Button
-			android:id="@+id/btnupdate"
+			android:id="@+id/btnsimpan"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:textColor="@color/design_default_color_primary_dark"
 			android:text="SIMPAN"/>
 
-		<Button
-			android:id="@+id/btndelete"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:textColor="@color/design_default_color_primary_dark"
-			android:text="HAPUS"/>
+
 
 	</LinearLayout>
 </RelativeLayout>

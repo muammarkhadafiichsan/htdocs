@@ -7,19 +7,96 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class PostPutDelBisnis {
-	@SerializedName("status")
-	String status;
-	@SerializedName("result")
-	Bisnis mBisnis;
-	@SerializedName("message")
-	String message;
+		@SerializedName("status")
+		Boolean status;
 
-	public String getStatus() {
+		@SerializedName("judul_bisnis")
+		String judul_bisnis;
+
+		@SerializedName("nama_peternak")
+		String nama_peternak;
+
+		@SerializedName("alamat")
+		String alamat;
+
+		@SerializedName("id")
+		String id;
+
+		@SerializedName("image")
+		String image;
+
+		@SerializedName("diskripsi")
+		String diskripsi;
+
+		@SerializedName("no_telephon")
+		String no_telephon;
+
+		@SerializedName("message")
+		String message;
+
+
+	public Boolean getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(Boolean status) {
 		this.status = status;
+	}
+
+	public String getJudul_bisnis() {
+		return judul_bisnis;
+	}
+
+	public void setJudul_bisnis(String judul_bisnis) {
+		this.judul_bisnis = judul_bisnis;
+	}
+
+	public String getNama_peternak() {
+		return nama_peternak;
+	}
+
+	public void setNama_peternak(String nama_peternak) {
+		this.nama_peternak = nama_peternak;
+	}
+
+	public String getAlamat() {
+		return alamat;
+	}
+
+	public void setAlamat(String alamat) {
+		this.alamat = alamat;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+	public String getDiskripsi() {
+		return diskripsi;
+	}
+
+	public void setDiskripsi(String diskripsi) {
+		this.diskripsi = diskripsi;
+	}
+
+	public String getNo_telephon() {
+		return no_telephon;
+	}
+
+	public void setNo_telephon(String no_telephon) {
+		this.no_telephon = no_telephon;
 	}
 
 	public String getMessage() {
@@ -29,13 +106,4 @@ public class PostPutDelBisnis {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-
-	public Bisnis getBisnis() {
-		return mBisnis;
-	}
-
-	public void setmBisnis(Bisnis Bisnis) {
-		mBisnis = Bisnis;
-	}
-
 }

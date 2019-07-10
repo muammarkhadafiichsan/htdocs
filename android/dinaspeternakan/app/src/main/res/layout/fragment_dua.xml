@@ -28,6 +28,9 @@
 				android:orientation="horizontal"
 				android:rowCount="2">
 
+
+
+
 				<android.support.v7.widget.RecyclerView
 					android:id="@+id/recyclerView"
 					android:layout_width="match_parent"
@@ -38,17 +41,13 @@
 
 				</android.support.v7.widget.RecyclerView>
 
-				<Button
-					android:id="@+id/btntambah"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:textColor="@color/design_default_color_primary_dark"
-					android:text="TAMBAH"/>
 
 			</GridLayout>
 
 
 		</RelativeLayout>
+
+
 
 	</ScrollView>
 

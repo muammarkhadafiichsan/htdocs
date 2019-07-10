@@ -109,6 +109,19 @@
 				android:layout_height="wrap_content"
 				android:textColor="@color/design_default_color_primary_dark"
 				android:text="UBAH"/>
+			<Button
+				android:id="@+id/btndelete"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/design_default_color_primary_dark"
+				android:text="HAPUS"/>
+
+			<Button
+				android:id="@+id/btninsert"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textColor="@color/design_default_color_primary_dark"
+				android:text="TAMBAH"/>
 
 
 		</LinearLayout>

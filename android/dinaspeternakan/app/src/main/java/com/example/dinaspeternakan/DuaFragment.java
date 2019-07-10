@@ -39,7 +39,6 @@ public class DuaFragment extends Fragment {
 							 Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
 		View myFragmentView = inflater.inflate(R.layout.fragment_dua, container, false);
-
 		mRecyclerView = (RecyclerView) myFragmentView.findViewById(R.id.recyclerView);
 		mLayoutManager = new GridLayoutManager(getActivity(),2);
 		mRecyclerView.setLayoutManager(mLayoutManager);

@@ -16,10 +16,7 @@
         android:id="@+id/galeri"
         android:title="@string/Galeri"
         android:icon="@drawable/upt"/>
-    <item
-        android:id="@+id/notif_menu"
-        android:title="@string/Notif"
-        android:icon="@drawable/kunjungan"/>
+
     <item
         android:id="@+id/akun_menu"
         android:title="@string/Akun"

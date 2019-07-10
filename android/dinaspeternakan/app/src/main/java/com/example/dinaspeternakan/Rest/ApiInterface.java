@@ -27,9 +27,9 @@ public interface ApiInterface {
 	Call<GetBisnis> getBisnis();
 
 	@FormUrlEncoded
-	@POST("Bisnis")
-	Call<PostPutDelBisnis> postBisnis(@Field("id") String id,
-									  @Field("jusul_bisnis") String judul_bisnis,
+	@POST("Forum_bisnis_API")
+	Call<PostPutDelBisnis> postBisnis(
+									  @Field("judul_bisnis") String judul_bisnis,
 									  @Field("nama_peternak") String nama,
 									  @Field("no_telephon") String nomor,
 									  @Field("alamat") String provider,
@@ -37,7 +37,7 @@ public interface ApiInterface {
 
 	@FormUrlEncoded
 	@PUT("Bisnis")
-	Call<PostPutDelBisnis> putBisnis(@Field("id") String id,
+	Call<PostPutDelBisnis> putBisnis(
 									 @Field("jusul_bisnis") String judul_bisnis,
 									@Field("nama_peternak") String nama,
 									@Field("no_telephon") String nomor,

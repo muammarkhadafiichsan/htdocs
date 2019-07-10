@@ -57,6 +57,7 @@ public class BisnisAdapter extends RecyclerView.Adapter<BisnisAdapter.MyViewHold
 				mIntent.putExtra("no_telephon", mBisnisList.get(position).getNo_telephon());
 
 
+
 				view.getContext().startActivity(mIntent);
 			}
 		});

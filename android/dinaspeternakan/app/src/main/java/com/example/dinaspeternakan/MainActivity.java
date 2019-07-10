@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 			R.drawable.ic_berita_24dp,
 			R.drawable.ic_layanan_24dp,
 			R.drawable.upt,
-			R.drawable.kunjungan,
 			R.drawable.ic_akun_24dp,
 	};
 
@@ -62,9 +61,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 				break;
 			case R.id.galeri:
 				fragment = new TigaFragment();
-				break;
-			case R.id.notif_menu:
-				fragment = new EmpatFragment();
 				break;
 			case R.id.akun_menu:
 				fragment = new LimaFragment();
