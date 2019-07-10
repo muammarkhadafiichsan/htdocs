@@ -1,6 +1,7 @@
 package com.example.dinaspeternakan.Rest;
 
 import com.example.dinaspeternakan.Model.GetArtikel;
+import com.example.dinaspeternakan.Model.GetBisnis;
 import com.example.dinaspeternakan.Model.GetUpt;
 import com.example.dinaspeternakan.User.ResponseLogin;
 import com.example.dinaspeternakan.User.ResponseRegister;
@@ -19,8 +20,8 @@ public interface ApiInterface {
 	@GET("UPT_rest_API")
 	Call<GetUpt> getUpt();
 
-	@GET("")
-	Call<GetUpt> getUpt();
+	@GET("forum_bisnis_API")
+	Call<GetBisnis> getBisnis();
 
 	@FormUrlEncoded
 	@POST("Login_android")

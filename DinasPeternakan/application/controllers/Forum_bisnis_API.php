@@ -30,7 +30,10 @@ class Forum_bisnis_API extends REST_Controller
             'id' => $this->post('id'),
             'judul_bisnis' => $this->post('judul_bisnis'),
             'image' => $this->input->post('image'),
-            'deskripsi'    => $this->post('deskripsi')
+            'alamat' => $this->input->post('alamat'),
+            'nama_peternak' => $this->input->post('nama_peternak'),
+            'no_telephon' => $this->input->post('no_telephon'),
+            'diskripsi'    => $this->post('diskripsi')
         );
         $insert = $this->db->insert('forum_bisnis', $data);
         if ($insert) {
@@ -46,9 +49,13 @@ class Forum_bisnis_API extends REST_Controller
     {
         $id = $this->put('id_puskeswan');
         $data = array(
-            'id_puskeswan'  => $this->put('id_puskeswan'),
-            'nama_kepala'  => $this->put('nama_kepala'),
-            'nomor'    => $this->put('nomor')
+            'id'  => $this->put('id'),
+            'judul_bisnis'  => $this->put('judul_bisnis'),
+            'diskripsi'  => $this->put('diskripsi'),
+            'alamat'  => $this->put('alamat'),
+            'nama_peternak'  => $this->put('nama_peternak'),
+            'no_telephon'  => $this->put('no_telephon'),
+            'image'    => $this->put('image')
         );
         $this->db->where('id_puskeswan', $id);
         $update = $this->db->update('anggota_puskeswan', $data);
@@ -61,11 +68,10 @@ class Forum_bisnis_API extends REST_Controller
 
     //Masukan function selanjutnya disini
     //Menghapus salah satu data kontak
-    function index_delete()
-    {
-        $id = $this->delete('id_puskeswan');
-        $this->db->where('id_puskeswan', $id);
-        $delete = $this->db->delete('anggota_puskeswan');
+    function index_delete() {
+        $id = $this->delete('id');
+        $this->db->where('id', $id);
+        $delete = $this->db->delete('forum_bisnis');
         if ($delete) {
             $this->response(array('status' => 'success'), 201);
         } else {
