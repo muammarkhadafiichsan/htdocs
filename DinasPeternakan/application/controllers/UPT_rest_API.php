@@ -6,7 +6,7 @@ require APPPATH . '/libraries/REST_Controller.php';
 
 use Restserver\Libraries\REST_Controller;
 
-class Artikel1 extends REST_Controller
+class UPT_rest_API extends REST_Controller
 {
 
     function __construct($config = 'rest')
@@ -30,6 +30,7 @@ class Artikel1 extends REST_Controller
             'id_puskeswan' => $this->post('id_puskeswan'),
             'nama_kepala' => $this->post('nama_kepala'),
             'TTL' => $this->input->post('TTL'),
+            'image' => $this->input->post('image'),
             'nomor'    => $this->post('nomor')
         );
         $insert = $this->db->insert('anggota', $data);

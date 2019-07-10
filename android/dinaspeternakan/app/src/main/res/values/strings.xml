@@ -17,4 +17,9 @@
 	<string name="title_placeholder">title_placeholder</string>
 	<string name="subtitle_detail_text">detail_text</string>
 
+	<string-array name="role">
+		<item>2</item>
+
+	</string-array>
+
 </resources>

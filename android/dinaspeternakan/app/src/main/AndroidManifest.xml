@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-		<activity android:name=".SatuFragment"/>
+		<activity android:name=".DetailAnggota"/>
 		<activity android:name=".DetailArtikel"/>
 		<activity android:name=".DetailForumUnggas"/>
 		<activity android:name=".ForumBisnis"/>

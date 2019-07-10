@@ -38,7 +38,7 @@ public class ArtikelAdapter extends RecyclerView.Adapter<ArtikelAdapter.MyViewHo
 
 	@Override
 	public void onBindViewHolder(MyViewHolder holder, final int position) {
-		//holder.mTextViewId.setText("Id = " + mItemList.get(position).getId_item());
+
 		holder.mTextViewNama.setText(mArtikelList.get(position).getName());
 		final String urlGambarBerita = "http://192.168.43.174/DinasPeternakan/assets/img/profile/" + mArtikelList.get(position).getImage();
 		Picasso.with(context).load(urlGambarBerita).into(holder.imageView);

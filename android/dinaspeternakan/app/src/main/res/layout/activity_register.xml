@@ -47,57 +47,36 @@
 			android:textSize="16dip" />
 
 		<EditText
-			android:id="@+id/nama_peternak"
+			android:id="@+id/nama"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center"
 			android:layout_margin="10dp"
-			android:hint="nama"
+			android:hint="Nama"
 			android:inputType="textEmailAddress"
 			android:singleLine="true" />
 
+
 		<EditText
-			android:id="@+id/telepon"
+			android:id="@+id/email"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center"
 			android:layout_margin="10dp"
-			android:hint="telepon"
+			android:hint="Email"
 			android:inputType="textEmailAddress"
 			android:singleLine="true" />
 
-		<EditText
-			android:id="@+id/jenis_ternak"
+		<Spinner
+			android:id="@+id/roleid"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:layout_gravity="center"
-			android:layout_margin="10dp"
-			android:hint="jenis_ternak"
-			android:inputType="textEmailAddress"
-			android:singleLine="true" />
+			android:entries="@array/role"/>
 
-		<EditText
-			android:id="@+id/alamat"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_gravity="center"
-			android:layout_margin="10dp"
-			android:hint="alamat"
-			android:inputType="textEmailAddress"
-			android:singleLine="true" />
-
-		<EditText
-			android:id="@+id/txt_username"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_gravity="center"
-			android:layout_margin="10dp"
-			android:hint="Username"
-			android:inputType="textEmailAddress"
-			android:singleLine="true" />
 
 		<EditText
 			android:id="@+id/txt_password"
+			android:inputType="textPassword"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_gravity="center"
@@ -106,14 +85,6 @@
 			android:password="true"
 			android:singleLine="true" />
 
-		<EditText
-			android:id="@+id/txt_confirm_password"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_gravity="center"
-			android:layout_margin="10dp"
-			android:hint="Comfirmation Password"
-			android:password="true" />
 
 		<Button
 			android:id="@+id/btn_register"
@@ -126,15 +97,7 @@
 			android:text="Register"
 			android:textStyle="bold" />
 
-		<Button
-			android:id="@+id/login"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_gravity="center"
-			android:layout_marginBottom="15dp"
-			android:background="@color/green"
-			android:text="Login"
-			android:textStyle="bold" />
+
 
 	</LinearLayout>
 </ScrollView>

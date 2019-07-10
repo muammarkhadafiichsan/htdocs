@@ -1,61 +1,71 @@
 package com.example.dinaspeternakan;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.CardView;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+
+import com.example.dinaspeternakan.Adapter.BisnisAdapter;
+import com.example.dinaspeternakan.Model.GetBisnis;
+import com.example.dinaspeternakan.Model.Bisnis;
+import com.example.dinaspeternakan.Rest.ApiClient;
+import com.example.dinaspeternakan.Rest.ApiInterface;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class DuaFragment extends Fragment {
+
+	ApiInterface mApiInterface;
+	private RecyclerView mRecyclerView;
+	private RecyclerView.Adapter mAdapter;
+	private RecyclerView.LayoutManager mLayoutManager;
+	public static SatuFragment ma;
+	public DuaFragment() {
+		// Required empty public constructor
+	}
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
-public class DuaFragment extends Fragment implements View.OnClickListener {
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+							 Bundle savedInstanceState) {
+		// Inflate the layout for this fragment
+		View myFragmentView = inflater.inflate(R.layout.fragment_dua, container, false);
 
-    private LinearLayout forumbisnis;
-    private LinearLayout kunjunganternak;
-    private CardView jualbeli;
-    public DuaFragment() {
-        // Required empty public constructor
-    }
+		mRecyclerView = (RecyclerView) myFragmentView.findViewById(R.id.recyclerView);
+		mLayoutManager = new GridLayoutManager(getActivity(),2);
+		mRecyclerView.setLayoutManager(mLayoutManager);
+		mApiInterface = ApiClient.getClient().create(ApiInterface.class);
 
+		refresh();
+		return myFragmentView;
+	}
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_dua, container, false);
+	public void refresh() {
+		Call<GetBisnis> UptCall = mApiInterface.getBisnis();
+		UptCall.enqueue(new Callback<GetBisnis>() {
+			@Override
+			public void onResponse(Call<GetUpt> call, Response<GetUpt>
+					response) {
+				List<Upt> UptList = response.body().getListDataUpt();
+				Log.d("Retrofit Get", "Jumlah : " +String.valueOf (UptList.size()));
+				mAdapter = new UptAdapter(UptList,getContext());
+				mRecyclerView.setAdapter(mAdapter);
+			}
 
-        forumbisnis = (LinearLayout) view.findViewById(R.id.forumbisnis);
-        forumbisnis.setOnClickListener(this);
+			@Override
+			public void onFailure(Call<GetUpt> call, Throwable t) {
+				Log.e("Retrofit Get", t.toString());
+			}
+		});
+	}
 
-        kunjunganternak = (LinearLayout) view.findViewById(R.id.kunjunganternak);
-        kunjunganternak.setOnClickListener(this);
-
-
-
-        return  view;
-    }
-
-
-    @Override
-    public void onClick(View view) {
-        if(view == forumbisnis){
-            Intent intent =new Intent(getActivity(),ForumBisnis.class);
-            startActivity(intent);
-        }
-
-        if(view == kunjunganternak){
-            Intent intent =new Intent(getActivity(),KunjunganTernak.class);
-            startActivity(intent);
-        }
-        if(view == jualbeli){
-            Intent intent =new Intent(getActivity(),Labupt.class);
-            startActivity(intent);
-        }
-    }
 }

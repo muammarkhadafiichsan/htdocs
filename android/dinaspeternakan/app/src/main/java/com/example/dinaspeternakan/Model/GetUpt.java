@@ -8,11 +8,11 @@ import java.util.List;
  * Created by root on 2/3/17.
  */
 
-public class GetAnggota {
+public class GetUpt {
 	@SerializedName("status")
 	String status;
 	@SerializedName("result")
-	List<Anggota> listDataAnggota;
+	List<Upt> listDataUpt;
 	@SerializedName("message")
 	String message;
 
@@ -30,9 +30,9 @@ public class GetAnggota {
 		this.message = message;
 	}
 
-	public List<Anggota> getListDataAnggota() { return listDataAnggota;
+	public List<Upt> getListDataUpt() { return listDataUpt;
 	}
-	public void setListDataanggota(List<Anggota> listDataanggota) {
-		this.listDataAnggota = listDataAnggota;
+	public void setListDataUpt(List<Upt> listDataUpt) {
+		this.listDataUpt = listDataUpt;
 	}
 }

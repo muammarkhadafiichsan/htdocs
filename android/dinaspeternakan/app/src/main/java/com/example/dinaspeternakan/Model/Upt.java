@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by root on 2/3/17.
  */
 
-public class Anggota {
+public class Upt {
 	@SerializedName("id_puskeswan")
 	private String id_puskeswan;
 
@@ -64,7 +64,7 @@ public class Anggota {
 		this.deskripsi = deskripsi;
 	}
 
-	public Anggota(String id_puskeswan, String nama_kepala, String ttl, String deskripsi, String image) {
+	public Upt (String id_puskeswan, String nama_kepala, String ttl, String deskripsi, String image) {
 
 		this.id_puskeswan = id_puskeswan;
 		this.nama_kepala = nama_kepala;
