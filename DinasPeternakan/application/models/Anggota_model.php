@@ -100,4 +100,23 @@ class Anggota_model extends CI_Model
     {
         return  $this->db->get('anggota_puskeswan');
     }
+    function edit_Lab_Upt($data, $id_puskeswan)
+    {
+        $this->db->where('id_puskeswan', $id_puskeswan);
+        $this->db->update('anggota_puskeswan', $data);
+    }
+    function delete2($id_puskeswan)
+    {
+        $this->_deleteImage($id_puskeswan);
+        $this->db->where('id_puskeswan', $id_puskeswan);
+        $this->db->delete('anggota_puskeswan');
+    }
+    private function _deleteImage($id_puskeswan)
+    {
+        $list = $this->getById($id_puskeswan);
+        if ($list->image != "default.jpg") {
+            $filename = explode(".", $list->image)[0];
+            return array_map('unlink', glob(FCPATH . "./assets/img/profile/$filename.*"));
+        }
+    }
 }

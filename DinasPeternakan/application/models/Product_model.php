@@ -59,9 +59,20 @@ class Product_model extends CI_Model
         $this->description = $post["description"];
     }
 
-    public function delete($id)
+    function delete($product_id)
     {
-        return $this->db->delete($this->_table, array("product_id" => $id));
+        $this->_deleteImage($product_id);
+        $this->db->where('product_id', $product_id);
+        $this->db->delete('products');
+    }
+
+    private function _deleteImage($product_id)
+    {
+        $list = $this->getById($product_id);
+        if ($list->image != "default.jpg") {
+            $filename = explode(".", $list->image)[0];
+            return array_map('unlink', glob(FCPATH . "./assets/img/profile/$filename.*"));
+        }
     }
 
 

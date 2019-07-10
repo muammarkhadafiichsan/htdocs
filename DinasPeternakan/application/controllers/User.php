@@ -218,19 +218,33 @@ class User extends CI_Controller
     {
         $product_id = $this->input->post('product_id');
         $name = $this->input->post('name');
-        $image = $this->_uploadImage('image');
+        // $image = $this->_uploadImage('image');
         $description = $this->input->post('description');
 
         $this->db->set('name', $name);
-        $this->db->set('image', $image);
+        // $this->db->set('image', $image);
         $this->db->set('description', $description);
-        $this->db->where('id_product', $product_id);
+        $this->db->where('product_id', $product_id);
         $this->db->update('products');
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
             Update Success
             </div>');
         redirect('user/list');
     }
+
+    public function delete($product_id)
+    {
+
+        if ($product_id) {
+            $this->Product_model->delete($product_id);
+            $this->session->set_flashdata('message', 'Delete Record Success');
+            redirect('user/list');
+        } else {
+            $this->session->set_flashdata('message', 'Record Not Found');
+            redirect('user/list');
+        }
+    }
+
     public function input_lab()
     {
 
@@ -277,5 +291,71 @@ class User extends CI_Controller
         $this->load->view('templates/topbar', $data);
         $this->load->view('user/list_anggota', $data);
         $this->load->view('templates/footer');
+    }
+    public function edit_Lab_Upt($id_puskeswan)
+    {
+        $data['title'] = 'edit UPT dan LAB';
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['list_lab'] = $this->db->get_where('anggota_puskeswan', ['id_puskeswan' => $id_puskeswan])->row_array();
+
+
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/sidebar', $data);
+            $this->load->view('templates/topbar', $data);
+            $this->load->view('user/edit_form', $data);
+            $this->load->view('templates/footer');
+        } else {
+
+            $id_puskeswan = $this->input->post('id_puskeswan');
+            $nama_kepalanama_kepala = $this->input->post('nama_kepala');
+            $TTL = $this->input->post('TTL');
+            $image = $this->input->post();
+            $deskripsi = $this->input->post('deskripsi');
+
+
+
+
+
+
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+            Update Success
+            </div>');
+            redirect('User/list_lab');
+        }
+    }
+
+    public function edit_action_UPT()
+    {
+        $id_puskeswan = $this->input->post('id_puskeswan');
+        $nama_kepala = $this->input->post('nama_kepala');
+        $TTL = $this->input->post('TTL');
+        // $image = $this->_uploadImage('image');
+        $deskripsi = $this->input->post('deskripsi');
+
+        $this->db->set('nama_kepala', $nama_kepala);
+        $this->db->set('TTL', $TTL);
+
+        // $this->db->set('image', $image);
+        $this->db->set('deskripsi', $deskripsi);
+        $this->db->where('id_puskeswan', $id_puskeswan);
+        $this->db->update('anggota_puskeswan');
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+            Update Success
+            </div>');
+        redirect('User/list_lab');
+    }
+    public function delete2($id_puskeswan)
+    {
+
+        if ($id_puskeswan) {
+            $this->Product_model->delete($id_puskeswan);
+            $this->session->set_flashdata('message', 'Delete Record Success');
+            redirect('User/list_lab');
+        } else {
+            $this->session->set_flashdata('message', 'Record Not Found');
+            redirect('User/list_lab');
+        }
     }
 }

@@ -18,6 +18,7 @@
                 <tbody>
                     <?php foreach ($list_lab as $list_lab) : ?>
                         <tr>
+                            <?php $list_lab->id_puskeswan ?>
                             <td width="150">
                                 <?php echo $list_lab->nama_kepala ?>
                             </td>
@@ -30,8 +31,8 @@
                             <td class="small">
                                 <?php echo substr($list_lab->deskripsi, 0, 120) ?>...</td>
                             <td width="250">
-                                <a href="<?php echo site_url('user/edit_artikel'); ?>" class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-                                <a onclick="deleteConfirm('<?php echo site_url('products/delete/' . $list_lab->id_puskeswan) ?>')" href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
+                                <a href="<?php echo site_url('user/edit_Lab_Upt/' . $list_lab->id_puskeswan); ?>" class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
+                                <a href="<?php echo site_url('user/delete/' . $list_lab->id_puskeswan); ?>" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

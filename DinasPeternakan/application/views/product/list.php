@@ -15,19 +15,21 @@
 					</tr>
 				</thead>
 				<tbody>
-					<?php foreach ($list as $list) : ?>
+					<?php foreach ($list as $tr) : ?>
 						<tr>
+							<?php $tr->product_id ?>
 							<td width="150">
-								<?php echo $list->name ?>
+								<?php echo $tr->name ?>
 							</td>
 							<td>
-								<img src="<?php echo base_url('assets/img/profile/' . $list->image) ?>" width="64" />
+								<img src="<?php echo base_url('assets/img/profile/' . $tr->image) ?>" width="64" />
 							</td>
 							<td class="small">
-								<?php echo substr($list->description, 0, 120) ?>...</td>
+								<?php echo substr($tr->description, 0, 120) ?>...</td>
+
 							<td width="250">
-								<a href="<?php echo site_url('user/edit_artikel'); ?>" class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-								<a onclick="deleteConfirm('<?php echo site_url('products/delete/' . $list->product_id) ?>')" href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
+								<a href="<?php echo site_url('user/edit_artikel/' . $tr->product_id); ?>" class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
+								<a href="<?php echo site_url('user/delete/' . $tr->product_id); ?>" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
 							</td>
 						</tr>
 					<?php endforeach; ?>
