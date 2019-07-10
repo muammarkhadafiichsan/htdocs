@@ -216,13 +216,34 @@ class User extends CI_Controller
 
     public function edit_action()
     {
+        $product_id = $this->uri->segment(3);
         $product_id = $this->input->post('product_id');
         $name = $this->input->post('name');
-        // $image = $this->_uploadImage('image');
         $description = $this->input->post('description');
+        $upload_image = $_FILES['image']['name'];
+
+        if ($upload_image) {
+            $config['upload_path'] = './assets/img/profile/';
+            $config['allowed_types'] = 'gif|jpg|png|JPG';
+            $config['max_size'] = '9048';
+            $this->load->library('upload', $config);
+
+            if ($this->upload->do_upload('image')) {
+
+                $old_image = $product_id;
+                if ($old_image != 'default.jpg') {
+                    unlink(FCPATH . '/assets/img/profile/' . $old_image);
+                }
+                $image = $this->upload->data('file_name');
+                $this->db->set('image', $image);
+            } else {
+                echo $this->upload->display_errors();
+            }
+        }
+
 
         $this->db->set('name', $name);
-        // $this->db->set('image', $image);
+
         $this->db->set('description', $description);
         $this->db->where('product_id', $product_id);
         $this->db->update('products');
@@ -331,8 +352,28 @@ class User extends CI_Controller
         $id_puskeswan = $this->input->post('id_puskeswan');
         $nama_kepala = $this->input->post('nama_kepala');
         $TTL = $this->input->post('TTL');
-        // $image = $this->_uploadImage('image');
         $deskripsi = $this->input->post('deskripsi');
+
+        $upload_image = $_FILES['image']['name'];
+
+        if ($upload_image) {
+            $config['upload_path'] = './assets/img/profile/';
+            $config['allowed_types'] = 'gif|jpg|png|JPG';
+            $config['max_size'] = '9048';
+            $this->load->library('upload', $config);
+
+            if ($this->upload->do_upload('image')) {
+
+                $old_image = $id_puskeswan;
+                if ($old_image != 'default.jpg') {
+                    unlink(FCPATH . '/assets/img/profile/' . $old_image);
+                }
+                $image = $this->upload->data('file_name');
+                $this->db->set('image', $image);
+            } else {
+                echo $this->upload->display_errors();
+            }
+        }
 
         $this->db->set('nama_kepala', $nama_kepala);
         $this->db->set('TTL', $TTL);

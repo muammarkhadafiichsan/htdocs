@@ -28,8 +28,8 @@
 
 		<div class="form-group">
 			<label for="name">Photo</label>
-			<!-- <input class="form-control-file <?php echo form_error('image') ? 'is-invalid' : '' ?>" type="file" name="image" />
-				<input type="hidden" name="old_image" value="<?php echo $list['image']; ?>" /> -->
+			<input class="form-control-file <?php echo form_error('image') ? 'is-invalid' : '' ?>" type="file" name="image" />
+			<input type="hidden" name="old_image" value="<?php echo $list_lab['image']; ?>" />
 			<div class="invalid-feedback">
 
 			</div>
