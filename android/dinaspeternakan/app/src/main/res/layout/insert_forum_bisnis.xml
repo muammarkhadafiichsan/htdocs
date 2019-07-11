@@ -92,12 +92,26 @@
 		android:layout_marginTop="80dp"
 		android:layout_marginBottom="10dp">
 
+
 		<Button
 			android:id="@+id/btnupdate"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:textColor="@color/design_default_color_primary_dark"
 			android:text="SIMPAN"/>
+
+		<Button
+			android:id="@+id/btnupload"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="@color/design_default_color_primary_dark"
+			android:text="UPLOAD" />
+		<TextView
+			android:id="@+id/id_image"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="gambar  "
+			android:textSize="20sp"/>
 
 
 

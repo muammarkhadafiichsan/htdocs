@@ -30,10 +30,11 @@ public interface ApiInterface {
 	@POST("Forum_bisnis_API")
 	Call<PostPutDelBisnis> postBisnis(
 									  @Field("judul_bisnis") String judul_bisnis,
-									  @Field("nama_peternak") String nama,
-									  @Field("no_telephon") String nomor,
-									  @Field("alamat") String provider,
-									  @Field("diskripsi") String harga);
+									  @Field("nama_peternak") String nama_peternak,
+									  @Field("no_telephon") String no_telephon,
+									  @Field("alamat") String alamat,
+
+									  @Field("diskripsi") String diskripsi);
 
 	@FormUrlEncoded
 	@PUT("Bisnis")
